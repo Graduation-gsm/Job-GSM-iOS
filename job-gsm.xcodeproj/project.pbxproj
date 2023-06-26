@@ -22,6 +22,11 @@
 		775BE4AA2A49A2E500DD68CD /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4A92A49A2E500DD68CD /* AppFlow.swift */; };
 		775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4AC2A49A36A00DD68CD /* JGStep.swift */; };
 		775BE4B22A49A43F00DD68CD /* OnBoardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4B12A49A43F00DD68CD /* OnBoardingFlow.swift */; };
+		775BE4B72A49A78200DD68CD /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 775BE4B42A49A78200DD68CD /* NotoSansKR-Medium.otf */; };
+		775BE4B82A49A78200DD68CD /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 775BE4B52A49A78200DD68CD /* NotoSansKR-Regular.otf */; };
+		775BE4B92A49A78200DD68CD /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 775BE4B62A49A78200DD68CD /* NotoSansKR-Bold.otf */; };
+		775BE4BC2A49A7B500DD68CD /* JGFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4BB2A49A7B500DD68CD /* JGFont.swift */; };
+		775BE4BF2A49A85500DD68CD /* JGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4BE2A49A85500DD68CD /* JGColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		775BE4A92A49A2E500DD68CD /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		775BE4AC2A49A36A00DD68CD /* JGStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGStep.swift; sourceTree = "<group>"; };
 		775BE4B12A49A43F00DD68CD /* OnBoardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFlow.swift; sourceTree = "<group>"; };
+		775BE4B42A49A78200DD68CD /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Medium.otf"; path = "../../../../../../Downloads/Noto_Sans_KR (3)/NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		775BE4B52A49A78200DD68CD /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../../../Downloads/Noto_Sans_KR (3)/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		775BE4B62A49A78200DD68CD /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.otf"; path = "../../../../../../Downloads/Noto_Sans_KR (3)/NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		775BE4BB2A49A7B500DD68CD /* JGFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGFont.swift; sourceTree = "<group>"; };
+		775BE4BE2A49A85500DD68CD /* JGColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,8 @@
 		775BE48C2A49806000DD68CD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				775BE4B32A49A71900DD68CD /* Font */,
+				775BE4BA2A49A7A200DD68CD /* Extension */,
 				775BE4802A490E2000DD68CD /* LaunchScreen.storyboard */,
 				775BE47E2A490E2000DD68CD /* Assets.xcassets */,
 			);
@@ -218,6 +230,25 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
+		775BE4B32A49A71900DD68CD /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4B62A49A78200DD68CD /* NotoSansKR-Bold.otf */,
+				775BE4B42A49A78200DD68CD /* NotoSansKR-Medium.otf */,
+				775BE4B52A49A78200DD68CD /* NotoSansKR-Regular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		775BE4BA2A49A7A200DD68CD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4BB2A49A7B500DD68CD /* JGFont.swift */,
+				775BE4BE2A49A85500DD68CD /* JGColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,8 +319,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775BE4B72A49A78200DD68CD /* NotoSansKR-Medium.otf in Resources */,
 				775BE4822A490E2000DD68CD /* LaunchScreen.storyboard in Resources */,
+				775BE4B82A49A78200DD68CD /* NotoSansKR-Regular.otf in Resources */,
 				775BE47F2A490E2000DD68CD /* Assets.xcassets in Resources */,
+				775BE4B92A49A78200DD68CD /* NotoSansKR-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,10 +335,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
+				775BE4BF2A49A85500DD68CD /* JGColor.swift in Sources */,
 				775BE4AA2A49A2E500DD68CD /* AppFlow.swift in Sources */,
 				775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */,
 				775BE4962A49867800DD68CD /* BaseViewController.swift in Sources */,
 				775BE49B2A49A05F00DD68CD /* OnBoardingViewModel.swift in Sources */,
+				775BE4BC2A49A7B500DD68CD /* JGFont.swift in Sources */,
 				775BE4A82A49A19A00DD68CD /* OnBoardingViewController.swift in Sources */,
 				775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */,
 				775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */,
