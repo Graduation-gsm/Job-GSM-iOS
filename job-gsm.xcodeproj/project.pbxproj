@@ -18,6 +18,10 @@
 		775BE4A02A49A12D00DD68CD /* GAuthSignin in Frameworks */ = {isa = PBXBuildFile; productRef = 775BE49F2A49A12D00DD68CD /* GAuthSignin */; };
 		775BE4A32A49A13B00DD68CD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 775BE4A22A49A13B00DD68CD /* SnapKit */; };
 		775BE4A62A49A14E00DD68CD /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 775BE4A52A49A14E00DD68CD /* Then */; };
+		775BE4A82A49A19A00DD68CD /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4A72A49A19A00DD68CD /* OnBoardingViewController.swift */; };
+		775BE4AA2A49A2E500DD68CD /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4A92A49A2E500DD68CD /* AppFlow.swift */; };
+		775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4AC2A49A36A00DD68CD /* JGStep.swift */; };
+		775BE4B22A49A43F00DD68CD /* OnBoardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4B12A49A43F00DD68CD /* OnBoardingFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		775BE4832A490E2000DD68CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		775BE4952A49867800DD68CD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		775BE49A2A49A05F00DD68CD /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
+		775BE4A72A49A19A00DD68CD /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		775BE4A92A49A2E500DD68CD /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		775BE4AC2A49A36A00DD68CD /* JGStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGStep.swift; sourceTree = "<group>"; };
+		775BE4B12A49A43F00DD68CD /* OnBoardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +138,9 @@
 			children = (
 				775BE4752A490E1F00DD68CD /* AppDelegate.swift */,
 				775BE4772A490E1F00DD68CD /* SceneDelegate.swift */,
+				775BE4A92A49A2E500DD68CD /* AppFlow.swift */,
+				775BE4AB2A49A34F00DD68CD /* Step */,
+				775BE4AE2A49A3CF00DD68CD /* Flows */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -162,6 +173,7 @@
 		775BE4982A49881B00DD68CD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				775BE4A72A49A19A00DD68CD /* OnBoardingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +184,38 @@
 				775BE49A2A49A05F00DD68CD /* OnBoardingViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		775BE4AB2A49A34F00DD68CD /* Step */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4AC2A49A36A00DD68CD /* JGStep.swift */,
+			);
+			path = Step;
+			sourceTree = "<group>";
+		};
+		775BE4AE2A49A3CF00DD68CD /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4AF2A49A3F000DD68CD /* Main */,
+				775BE4B02A49A3F400DD68CD /* OnBoarding */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		775BE4AF2A49A3F000DD68CD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		775BE4B02A49A3F400DD68CD /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4B12A49A43F00DD68CD /* OnBoardingFlow.swift */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,11 +300,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
+				775BE4AA2A49A2E500DD68CD /* AppFlow.swift in Sources */,
 				775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */,
 				775BE4962A49867800DD68CD /* BaseViewController.swift in Sources */,
 				775BE49B2A49A05F00DD68CD /* OnBoardingViewModel.swift in Sources */,
+				775BE4A82A49A19A00DD68CD /* OnBoardingViewController.swift in Sources */,
 				775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */,
 				775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */,
+				775BE4B22A49A43F00DD68CD /* OnBoardingFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
