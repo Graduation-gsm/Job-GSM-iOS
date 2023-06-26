@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Then
+import GAuthSignin
 
 class OnBoardingViewController: BaseViewController<OnBoardingViewModel> {
     let vm = OnBoardingViewModel()
@@ -44,8 +45,10 @@ class OnBoardingViewController: BaseViewController<OnBoardingViewModel> {
         $0.textAlignment = .center
     }
     
+    private let gauthSignInButton = GAuthButton(auth: .signin, color: .colored, rounded: .default)
+    
     override func addView() {
-        [logo, subText].forEach {
+        [logo, subText, gauthSignInButton].forEach {
             view.addSubview($0)
         }
     }
@@ -58,6 +61,12 @@ class OnBoardingViewController: BaseViewController<OnBoardingViewModel> {
         subText.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(logo.snp.bottom).offset(10)
+        }
+        gauthSignInButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(70)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(60)
+            $0.width.equalTo(323)
         }
     }
 
