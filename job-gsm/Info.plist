@@ -10,6 +10,10 @@
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
+		<key>REDIREDCT_URI</key>
+		<string>https://port-0-job-gsm-backend-nx562olfamh7iw.sel3.cloudtype.app/</string>
+		<key>CLIENT_ID</key>
+		<string>efbe52ca13cc47ceb020bb4b2f3d9febf40405c50035488cb2e4a2344f352bac</string>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 		<key>UISceneConfigurations</key>

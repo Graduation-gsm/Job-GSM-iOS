@@ -15,6 +15,7 @@ class OnBoardingViewController: BaseViewController<OnBoardingViewModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        gauthButtonSetUp()
     }
     
     init(){
@@ -46,6 +47,16 @@ class OnBoardingViewController: BaseViewController<OnBoardingViewModel> {
     }
     
     private let gauthSignInButton = GAuthButton(auth: .signin, color: .colored, rounded: .default)
+    
+    private func gauthButtonSetUp() {
+        gauthSignInButton.prepare(
+            clientID: Bundle.module.object(forInfoDictionaryKey: "CLIENT_ID") as? String ?? "",
+            redirectURI: Bundle.module.object(forInfoDictionaryKey: "REDIREDCT_URI") as? String ?? "",
+            presenting: self
+        ) { code in
+//            self.viewModel.gauthSignInCompleted(code: code)
+        }
+    }
     
     override func addView() {
         [logo, subText, gauthSignInButton].forEach {

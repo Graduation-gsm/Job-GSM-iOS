@@ -27,6 +27,7 @@
 		775BE4B92A49A78200DD68CD /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 775BE4B62A49A78200DD68CD /* NotoSansKR-Bold.otf */; };
 		775BE4BC2A49A7B500DD68CD /* JGFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4BB2A49A7B500DD68CD /* JGFont.swift */; };
 		775BE4BF2A49A85500DD68CD /* JGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4BE2A49A85500DD68CD /* JGColor.swift */; };
+		775BE4C12A49DB0F00DD68CD /* JGBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4C02A49DB0F00DD68CD /* JGBundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		775BE4B62A49A78200DD68CD /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.otf"; path = "../../../../../../Downloads/Noto_Sans_KR (3)/NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		775BE4BB2A49A7B500DD68CD /* JGFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGFont.swift; sourceTree = "<group>"; };
 		775BE4BE2A49A85500DD68CD /* JGColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGColor.swift; sourceTree = "<group>"; };
+		775BE4C02A49DB0F00DD68CD /* JGBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGBundle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 			children = (
 				775BE4BB2A49A7B500DD68CD /* JGFont.swift */,
 				775BE4BE2A49A85500DD68CD /* JGColor.swift */,
+				775BE4C02A49DB0F00DD68CD /* JGBundle.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775BE4C12A49DB0F00DD68CD /* JGBundle.swift in Sources */,
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
 				775BE4BF2A49A85500DD68CD /* JGColor.swift in Sources */,
 				775BE4AA2A49A2E500DD68CD /* AppFlow.swift in Sources */,
