@@ -15,6 +15,9 @@
 		775BE48B2A4950D500DD68CD /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 775BE48A2A4950D500DD68CD /* RxFlow */; };
 		775BE4962A49867800DD68CD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4952A49867800DD68CD /* BaseViewController.swift */; };
 		775BE49B2A49A05F00DD68CD /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE49A2A49A05F00DD68CD /* OnBoardingViewModel.swift */; };
+		775BE4A02A49A12D00DD68CD /* GAuthSignin in Frameworks */ = {isa = PBXBuildFile; productRef = 775BE49F2A49A12D00DD68CD /* GAuthSignin */; };
+		775BE4A32A49A13B00DD68CD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 775BE4A22A49A13B00DD68CD /* SnapKit */; };
+		775BE4A62A49A14E00DD68CD /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 775BE4A52A49A14E00DD68CD /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775BE4A32A49A13B00DD68CD /* SnapKit in Frameworks */,
+				775BE4A02A49A12D00DD68CD /* GAuthSignin in Frameworks */,
 				775BE48B2A4950D500DD68CD /* RxFlow in Frameworks */,
+				775BE4A62A49A14E00DD68CD /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +192,9 @@
 			name = "job-gsm";
 			packageProductDependencies = (
 				775BE48A2A4950D500DD68CD /* RxFlow */,
+				775BE49F2A49A12D00DD68CD /* GAuthSignin */,
+				775BE4A22A49A13B00DD68CD /* SnapKit */,
+				775BE4A52A49A14E00DD68CD /* Then */,
 			);
 			productName = "job-gsm";
 			productReference = 775BE4722A490E1F00DD68CD /* job-gsm.app */;
@@ -217,6 +226,9 @@
 			mainGroup = 775BE4692A490E1F00DD68CD;
 			packageReferences = (
 				775BE4892A4950D500DD68CD /* XCRemoteSwiftPackageReference "RxFlow" */,
+				775BE49E2A49A12D00DD68CD /* XCRemoteSwiftPackageReference "GAuthSignin-Swift" */,
+				775BE4A12A49A13B00DD68CD /* XCRemoteSwiftPackageReference "SnapKit" */,
+				775BE4A42A49A14E00DD68CD /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 775BE4732A490E1F00DD68CD /* Products */;
 			projectDirPath = "";
@@ -466,6 +478,30 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		775BE49E2A49A12D00DD68CD /* XCRemoteSwiftPackageReference "GAuthSignin-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GSM-MSG/GAuthSignin-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+		775BE4A12A49A13B00DD68CD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		775BE4A42A49A14E00DD68CD /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -473,6 +509,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 775BE4892A4950D500DD68CD /* XCRemoteSwiftPackageReference "RxFlow" */;
 			productName = RxFlow;
+		};
+		775BE49F2A49A12D00DD68CD /* GAuthSignin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 775BE49E2A49A12D00DD68CD /* XCRemoteSwiftPackageReference "GAuthSignin-Swift" */;
+			productName = GAuthSignin;
+		};
+		775BE4A22A49A13B00DD68CD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 775BE4A12A49A13B00DD68CD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		775BE4A52A49A14E00DD68CD /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 775BE4A42A49A14E00DD68CD /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
