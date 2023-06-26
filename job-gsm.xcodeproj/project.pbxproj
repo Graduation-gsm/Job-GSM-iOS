@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4752A490E1F00DD68CD /* AppDelegate.swift */; };
 		775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4772A490E1F00DD68CD /* SceneDelegate.swift */; };
-		775BE47A2A490E1F00DD68CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4792A490E1F00DD68CD /* ViewController.swift */; };
+		775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4792A490E1F00DD68CD /* BaseViewModel.swift */; };
 		775BE47F2A490E2000DD68CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 775BE47E2A490E2000DD68CD /* Assets.xcassets */; };
 		775BE4822A490E2000DD68CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775BE4802A490E2000DD68CD /* LaunchScreen.storyboard */; };
 		775BE48B2A4950D500DD68CD /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 775BE48A2A4950D500DD68CD /* RxFlow */; };
@@ -19,7 +19,7 @@
 		775BE4722A490E1F00DD68CD /* job-gsm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "job-gsm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		775BE4752A490E1F00DD68CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		775BE4772A490E1F00DD68CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		775BE4792A490E1F00DD68CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		775BE4792A490E1F00DD68CD /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		775BE47E2A490E2000DD68CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		775BE4812A490E2000DD68CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		775BE4832A490E2000DD68CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,7 +58,6 @@
 			children = (
 				775BE48C2A49806000DD68CD /* Resources */,
 				775BE48D2A49806E00DD68CD /* Sources */,
-				775BE4792A490E1F00DD68CD /* ViewController.swift */,
 				775BE4832A490E2000DD68CD /* Info.plist */,
 			);
 			path = "job-gsm";
@@ -134,6 +133,7 @@
 		775BE4942A4980EE00DD68CD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				775BE4792A490E1F00DD68CD /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -214,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				775BE47A2A490E1F00DD68CD /* ViewController.swift in Sources */,
+				775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */,
 				775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */,
 				775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */,
 			);
