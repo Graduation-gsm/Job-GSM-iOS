@@ -58,15 +58,87 @@
 		775BE4742A490E1F00DD68CD /* job-gsm */ = {
 			isa = PBXGroup;
 			children = (
-				775BE4752A490E1F00DD68CD /* AppDelegate.swift */,
-				775BE4772A490E1F00DD68CD /* SceneDelegate.swift */,
+				775BE48C2A49806000DD68CD /* Resources */,
+				775BE48D2A49806E00DD68CD /* Sources */,
 				775BE4792A490E1F00DD68CD /* ViewController.swift */,
 				775BE47B2A490E1F00DD68CD /* Main.storyboard */,
-				775BE47E2A490E2000DD68CD /* Assets.xcassets */,
-				775BE4802A490E2000DD68CD /* LaunchScreen.storyboard */,
 				775BE4832A490E2000DD68CD /* Info.plist */,
 			);
 			path = "job-gsm";
+			sourceTree = "<group>";
+		};
+		775BE48C2A49806000DD68CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4802A490E2000DD68CD /* LaunchScreen.storyboard */,
+				775BE47E2A490E2000DD68CD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		775BE48D2A49806E00DD68CD /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				775BE48E2A49808A00DD68CD /* Application */,
+				775BE48F2A49808E00DD68CD /* Data */,
+				775BE4902A49809900DD68CD /* Presentation */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		775BE48E2A49808A00DD68CD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4922A4980BF00DD68CD /* Flow */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		775BE48F2A49808E00DD68CD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		775BE4902A49809900DD68CD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4912A4980AF00DD68CD /* Base */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		775BE4912A4980AF00DD68CD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4942A4980EE00DD68CD /* ViewModel */,
+				775BE4932A4980E900DD68CD /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		775BE4922A4980BF00DD68CD /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4752A490E1F00DD68CD /* AppDelegate.swift */,
+				775BE4772A490E1F00DD68CD /* SceneDelegate.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		775BE4932A4980E900DD68CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		775BE4942A4980EE00DD68CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
