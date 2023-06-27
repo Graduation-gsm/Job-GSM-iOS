@@ -28,6 +28,7 @@
 		775BE4BC2A49A7B500DD68CD /* JGFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4BB2A49A7B500DD68CD /* JGFont.swift */; };
 		775BE4BF2A49A85500DD68CD /* JGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4BE2A49A85500DD68CD /* JGColor.swift */; };
 		775BE4C12A49DB0F00DD68CD /* JGBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4C02A49DB0F00DD68CD /* JGBundle.swift */; };
+		775BE4C62A4AF99D00DD68CD /* InsertInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4C52A4AF99D00DD68CD /* InsertInfoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		775BE4BB2A49A7B500DD68CD /* JGFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGFont.swift; sourceTree = "<group>"; };
 		775BE4BE2A49A85500DD68CD /* JGColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGColor.swift; sourceTree = "<group>"; };
 		775BE4C02A49DB0F00DD68CD /* JGBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGBundle.swift; sourceTree = "<group>"; };
+		775BE4C52A4AF99D00DD68CD /* InsertInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertInfoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		775BE4902A49809900DD68CD /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				775BE4C22A4AF98400DD68CD /* InsertInfo */,
 				775BE4972A4987F400DD68CD /* OnBoarding */,
 				775BE4912A4980AF00DD68CD /* Base */,
 			);
@@ -252,6 +255,30 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		775BE4C22A4AF98400DD68CD /* InsertInfo */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4C42A4AF98E00DD68CD /* ViewModel */,
+				775BE4C32A4AF98B00DD68CD /* View */,
+			);
+			path = InsertInfo;
+			sourceTree = "<group>";
+		};
+		775BE4C32A4AF98B00DD68CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		775BE4C42A4AF98E00DD68CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4C52A4AF99D00DD68CD /* InsertInfoViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -348,6 +375,7 @@
 				775BE4A82A49A19A00DD68CD /* OnBoardingViewController.swift in Sources */,
 				775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */,
 				775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */,
+				775BE4C62A4AF99D00DD68CD /* InsertInfoViewModel.swift in Sources */,
 				775BE4B22A49A43F00DD68CD /* OnBoardingFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
