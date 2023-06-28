@@ -12,7 +12,7 @@ extension Foundation.Bundle {
 // MARK: - Objective-C Bundle Accessor
 
 @objc
-public class GCMSResources: NSObject {
+public class JGResources: NSObject {
     @objc public class var bundle: Bundle {
         return .module
     }

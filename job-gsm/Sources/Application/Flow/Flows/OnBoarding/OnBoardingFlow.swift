@@ -19,6 +19,8 @@ class OnBoardingFlow: Flow {
         switch step {
         case .onBoardingIsRequired:
             return coordinateToOnBoarding()
+        case .insertInfoIsRequired:
+            return coordinateInsertInfo()
         default:
             return .none
         }
@@ -30,6 +32,13 @@ private extension OnBoardingFlow {
         let vm = OnBoardingViewModel()
         let vc = OnBoardingViewController()
         self.rootViewController.setViewControllers([vc], animated: false)
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vm))
+    }
+    
+    private func coordinateInsertInfo() -> FlowContributors {
+        let vm = InsertInfoViewModel()
+        let vc = InsertInfoViewController()
+        self.rootViewController.pushViewController(vc, animated: false)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vm))
     }
 }

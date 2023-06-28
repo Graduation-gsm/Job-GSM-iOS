@@ -54,7 +54,8 @@ class OnBoardingViewController: BaseViewController<OnBoardingViewModel> {
             redirectURI: Bundle.module.object(forInfoDictionaryKey: "REDIREDCT_URI") as? String ?? "",
             presenting: self
         ) { code in
-//            self.viewModel.gauthSignInCompleted(code: code)
+            print(code)
+            self.viewModel.steps.accept(JGStep.insertInfoIsRequired)
         }
     }
     
