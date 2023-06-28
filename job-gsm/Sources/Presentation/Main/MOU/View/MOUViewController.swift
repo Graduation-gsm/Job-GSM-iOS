@@ -2,8 +2,8 @@ import UIKit
 import SnapKit
 import Then
 
-class MOUViewController: BaseViewController<HomeViewModel> {
-    let vm = HomeViewModel()
+class MOUViewController: BaseViewController<MOUViewModel> {
+    let vm = MOUViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()

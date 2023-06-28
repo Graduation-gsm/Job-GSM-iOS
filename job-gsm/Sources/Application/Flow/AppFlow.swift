@@ -10,7 +10,7 @@ struct AppStepper: Stepper {
     init() {}
     
     var initialStep: Step {
-        return JGStep.insertInfoIsRequired
+        return JGStep.tabBarIsRequired
     }
 }
 
@@ -34,8 +34,10 @@ final class AppFlow: Flow {
         guard let step = step as? JGStep else {return .none}
         
         switch step {
-        case .insertInfoIsRequired  :
+        case .insertInfoIsRequired:
             return coordinateToIntro()
+        case .tabBarIsRequired:
+            return coordinateToTabBar()
         default:
             return .none
         }
@@ -50,6 +52,18 @@ final class AppFlow: Flow {
             flowContributor: .contribute(
                 withNextPresentable: flow,
                 withNextStepper: OneStepper(withSingleStep: JGStep.insertInfoIsRequired)
+        ))
+    }
+    
+    private func coordinateToTabBar() -> FlowContributors {
+        let flow = TabBarFlow()
+        Flows.use(flow, when: .created) { (root) in
+            self.window.rootViewController = root
+        }
+        return .one(
+            flowContributor: .contribute(
+                withNextPresentable: flow,
+                withNextStepper: OneStepper(withSingleStep: JGStep.tabBarIsRequired)
         ))
     }
 }

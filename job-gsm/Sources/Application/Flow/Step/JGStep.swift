@@ -16,4 +16,7 @@ enum JGStep: Step {
     
     //MARK: Profile
     case profileIsRequired
+    
+    //MARK: TabBar
+    case tabBarIsRequired
 }
