@@ -32,6 +32,7 @@
 		775BE4C82A4AFAE500DD68CD /* InsertInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4C72A4AFAE500DD68CD /* InsertInfoViewController.swift */; };
 		775BE4CC2A4AFC1100DD68CD /* JGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4CB2A4AFC1100DD68CD /* JGTextField.swift */; };
 		775BE4D12A4C205F00DD68CD /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4D02A4C205F00DD68CD /* TextField.swift */; };
+		775BE4D62A4C281B00DD68CD /* JGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4D52A4C281B00DD68CD /* JGButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		775BE4C72A4AFAE500DD68CD /* InsertInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertInfoViewController.swift; sourceTree = "<group>"; };
 		775BE4CB2A4AFC1100DD68CD /* JGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGTextField.swift; sourceTree = "<group>"; };
 		775BE4D02A4C205F00DD68CD /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		775BE4D52A4C281B00DD68CD /* JGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JGButton.swift; path = "job-gsm/DesignSystem/JGButton.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +293,7 @@
 		775BE4C92A4AFBDB00DD68CD /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				775BE4D22A4C27FB00DD68CD /* Button */,
 				775BE4CA2A4AFBE800DD68CD /* TextField */,
 			);
 			path = DesignSystem;
@@ -302,6 +305,14 @@
 				775BE4CB2A4AFC1100DD68CD /* JGTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		775BE4D22A4C27FB00DD68CD /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4D52A4C281B00DD68CD /* JGButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +403,7 @@
 				775BE4C12A49DB0F00DD68CD /* JGBundle.swift in Sources */,
 				775BE4C82A4AFAE500DD68CD /* InsertInfoViewController.swift in Sources */,
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
+				775BE4D62A4C281B00DD68CD /* JGButton.swift in Sources */,
 				775BE4BF2A49A85500DD68CD /* JGColor.swift in Sources */,
 				775BE4AA2A49A2E500DD68CD /* AppFlow.swift in Sources */,
 				775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */,
