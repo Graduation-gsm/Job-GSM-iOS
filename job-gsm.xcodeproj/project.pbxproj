@@ -31,7 +31,7 @@
 		775BE4C62A4AF99D00DD68CD /* InsertInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4C52A4AF99D00DD68CD /* InsertInfoViewModel.swift */; };
 		775BE4C82A4AFAE500DD68CD /* InsertInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4C72A4AFAE500DD68CD /* InsertInfoViewController.swift */; };
 		775BE4CC2A4AFC1100DD68CD /* JGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4CB2A4AFC1100DD68CD /* JGTextField.swift */; };
-		775BE4D12A4C205F00DD68CD /* JGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4D02A4C205F00DD68CD /* JGTextField.swift */; };
+		775BE4D12A4C205F00DD68CD /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4D02A4C205F00DD68CD /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +57,7 @@
 		775BE4C52A4AF99D00DD68CD /* InsertInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertInfoViewModel.swift; sourceTree = "<group>"; };
 		775BE4C72A4AFAE500DD68CD /* InsertInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertInfoViewController.swift; sourceTree = "<group>"; };
 		775BE4CB2A4AFC1100DD68CD /* JGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGTextField.swift; sourceTree = "<group>"; };
-		775BE4D02A4C205F00DD68CD /* JGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGTextField.swift; sourceTree = "<group>"; };
+		775BE4D02A4C205F00DD68CD /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,7 +258,7 @@
 				775BE4BB2A49A7B500DD68CD /* JGFont.swift */,
 				775BE4BE2A49A85500DD68CD /* JGColor.swift */,
 				775BE4C02A49DB0F00DD68CD /* JGBundle.swift */,
-				775BE4D02A4C205F00DD68CD /* JGTextField.swift */,
+				775BE4D02A4C205F00DD68CD /* TextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -395,7 +395,7 @@
 				775BE4BF2A49A85500DD68CD /* JGColor.swift in Sources */,
 				775BE4AA2A49A2E500DD68CD /* AppFlow.swift in Sources */,
 				775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */,
-				775BE4D12A4C205F00DD68CD /* JGTextField.swift in Sources */,
+				775BE4D12A4C205F00DD68CD /* TextField.swift in Sources */,
 				775BE4CC2A4AFC1100DD68CD /* JGTextField.swift in Sources */,
 				775BE4962A49867800DD68CD /* BaseViewController.swift in Sources */,
 				775BE49B2A49A05F00DD68CD /* OnBoardingViewModel.swift in Sources */,
