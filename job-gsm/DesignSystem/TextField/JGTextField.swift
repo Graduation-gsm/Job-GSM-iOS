@@ -10,9 +10,11 @@ public final class JGTextField: UITextField {
     }
     
     convenience init(
-        placeholder: String = ""
+        placeholder: String = "",
+        width: Int = 0
     ) {
         self.init()
+        self.leftPadding(width: width)
         self.placeholder = placeholder
         self.backgroundColor = .f20
         self.layer.cornerRadius = 8
