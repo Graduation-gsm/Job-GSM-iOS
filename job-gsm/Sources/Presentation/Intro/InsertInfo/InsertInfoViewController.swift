@@ -1,6 +1,8 @@
 import UIKit
 import SnapKit
 import Then
+import RxCocoa
+import RxSwift
 
 class InsertInfoViewController: BaseViewController<InsertInfoViewModel> {
     let vm = InsertInfoViewModel()
@@ -8,6 +10,14 @@ class InsertInfoViewController: BaseViewController<InsertInfoViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "학생 정보 입력"
+        bindViewModel()
+    }
+    
+    private func bindViewModel() {
+        let input = InsertInfoViewModel.Input(
+            buttonDidTap: completeButton.rx.tap.asObservable()
+        )
+        viewModel.transVC(input: input)
     }
     
     init() {

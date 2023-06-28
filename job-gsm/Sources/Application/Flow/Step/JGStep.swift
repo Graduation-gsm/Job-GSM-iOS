@@ -7,4 +7,16 @@ enum JGStep: Step {
     
     //MARK: Inesrt Info
     case insertInfoIsRequired
+    
+    //MARK: Home
+    case homeIsRequired
+    
+    //MARK: MOU
+    case mouIsRequired
+    
+    //MARK: Profile
+    case profileIsRequired
+    
+    //MARK: TabBar
+    case tabBarIsRequired
 }
