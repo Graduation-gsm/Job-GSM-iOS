@@ -10,7 +10,7 @@ struct AppStepper: Stepper {
     init() {}
     
     var initialStep: Step {
-        return JGStep.onBoardingIsRequired
+        return JGStep.insertInfoIsRequired
     }
 }
 
@@ -34,7 +34,7 @@ final class AppFlow: Flow {
         guard let step = step as? JGStep else {return .none}
         
         switch step {
-        case .onBoardingIsRequired:
+        case .insertInfoIsRequired  :
             return coordinateToIntro()
         default:
             return .none
@@ -49,7 +49,7 @@ final class AppFlow: Flow {
         return .one(
             flowContributor: .contribute(
                 withNextPresentable: flow,
-                withNextStepper: OneStepper(withSingleStep: JGStep.onBoardingIsRequired)
+                withNextStepper: OneStepper(withSingleStep: JGStep.insertInfoIsRequired)
         ))
     }
 }
