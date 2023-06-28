@@ -33,6 +33,12 @@
 		775BE4CC2A4AFC1100DD68CD /* JGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4CB2A4AFC1100DD68CD /* JGTextField.swift */; };
 		775BE4D12A4C205F00DD68CD /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4D02A4C205F00DD68CD /* TextField.swift */; };
 		775BE4D62A4C281B00DD68CD /* JGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4D52A4C281B00DD68CD /* JGButton.swift */; };
+		77C033322A4C2F8A008E95D6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033312A4C2F8A008E95D6 /* HomeViewController.swift */; };
+		77C033372A4C2FFA008E95D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033362A4C2FFA008E95D6 /* HomeViewModel.swift */; };
+		77C0333C2A4C30BF008E95D6 /* MOUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0333B2A4C30BF008E95D6 /* MOUViewController.swift */; };
+		77C0333E2A4C30D1008E95D6 /* MOUViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0333D2A4C30D1008E95D6 /* MOUViewModel.swift */; };
+		77C033442A4C312B008E95D6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033432A4C312B008E95D6 /* ProfileViewController.swift */; };
+		77C033462A4C313A008E95D6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033452A4C313A008E95D6 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,12 @@
 		775BE4CB2A4AFC1100DD68CD /* JGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGTextField.swift; sourceTree = "<group>"; };
 		775BE4D02A4C205F00DD68CD /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		775BE4D52A4C281B00DD68CD /* JGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JGButton.swift; path = "job-gsm/DesignSystem/JGButton.swift"; sourceTree = SOURCE_ROOT; };
+		77C033312A4C2F8A008E95D6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		77C033362A4C2FFA008E95D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		77C0333B2A4C30BF008E95D6 /* MOUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOUViewController.swift; sourceTree = "<group>"; };
+		77C0333D2A4C30D1008E95D6 /* MOUViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOUViewModel.swift; sourceTree = "<group>"; };
+		77C033432A4C312B008E95D6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		77C033452A4C313A008E95D6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +155,8 @@
 		775BE4902A49809900DD68CD /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				775BE4C22A4AF98400DD68CD /* InsertInfo */,
-				775BE4972A4987F400DD68CD /* OnBoarding */,
+				77C033342A4C2FDD008E95D6 /* IIntro */,
+				77C0332D2A4C2F1A008E95D6 /* Main */,
 				775BE4912A4980AF00DD68CD /* Base */,
 			);
 			path = Presentation;
@@ -315,6 +327,100 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		77C0332D2A4C2F1A008E95D6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				77C0333F2A4C3102008E95D6 /* Profile */,
+				77C033382A4C30A5008E95D6 /* MOU */,
+				77C0332E2A4C2F38008E95D6 /* Home */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		77C0332E2A4C2F38008E95D6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				77C033302A4C2F67008E95D6 /* ViewModel */,
+				77C0332F2A4C2F63008E95D6 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		77C0332F2A4C2F63008E95D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77C033312A4C2F8A008E95D6 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77C033302A4C2F67008E95D6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				77C033362A4C2FFA008E95D6 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77C033342A4C2FDD008E95D6 /* IIntro */ = {
+			isa = PBXGroup;
+			children = (
+				775BE4C22A4AF98400DD68CD /* InsertInfo */,
+				775BE4972A4987F400DD68CD /* OnBoarding */,
+			);
+			path = IIntro;
+			sourceTree = "<group>";
+		};
+		77C033382A4C30A5008E95D6 /* MOU */ = {
+			isa = PBXGroup;
+			children = (
+				77C0333A2A4C30AF008E95D6 /* ViewModel */,
+				77C033392A4C30AB008E95D6 /* View */,
+			);
+			path = MOU;
+			sourceTree = "<group>";
+		};
+		77C033392A4C30AB008E95D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77C0333B2A4C30BF008E95D6 /* MOUViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77C0333A2A4C30AF008E95D6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				77C0333D2A4C30D1008E95D6 /* MOUViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77C0333F2A4C3102008E95D6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				77C033412A4C310C008E95D6 /* ViewModel */,
+				77C033402A4C3108008E95D6 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		77C033402A4C3108008E95D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77C033432A4C312B008E95D6 /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77C033412A4C310C008E95D6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				77C033452A4C313A008E95D6 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -400,18 +506,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77C033372A4C2FFA008E95D6 /* HomeViewModel.swift in Sources */,
 				775BE4C12A49DB0F00DD68CD /* JGBundle.swift in Sources */,
 				775BE4C82A4AFAE500DD68CD /* InsertInfoViewController.swift in Sources */,
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
 				775BE4D62A4C281B00DD68CD /* JGButton.swift in Sources */,
 				775BE4BF2A49A85500DD68CD /* JGColor.swift in Sources */,
+				77C033442A4C312B008E95D6 /* ProfileViewController.swift in Sources */,
+				77C033322A4C2F8A008E95D6 /* HomeViewController.swift in Sources */,
 				775BE4AA2A49A2E500DD68CD /* AppFlow.swift in Sources */,
 				775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */,
+				77C0333E2A4C30D1008E95D6 /* MOUViewModel.swift in Sources */,
 				775BE4D12A4C205F00DD68CD /* TextField.swift in Sources */,
 				775BE4CC2A4AFC1100DD68CD /* JGTextField.swift in Sources */,
 				775BE4962A49867800DD68CD /* BaseViewController.swift in Sources */,
 				775BE49B2A49A05F00DD68CD /* OnBoardingViewModel.swift in Sources */,
+				77C033462A4C313A008E95D6 /* ProfileViewModel.swift in Sources */,
 				775BE4BC2A49A7B500DD68CD /* JGFont.swift in Sources */,
+				77C0333C2A4C30BF008E95D6 /* MOUViewController.swift in Sources */,
 				775BE4A82A49A19A00DD68CD /* OnBoardingViewController.swift in Sources */,
 				775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */,
 				775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */,
