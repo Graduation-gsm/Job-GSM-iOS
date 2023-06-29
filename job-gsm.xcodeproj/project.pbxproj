@@ -46,6 +46,7 @@
 		77C033532A4C4B01008E95D6 /* ProfileFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033522A4C4B01008E95D6 /* ProfileFlow.swift */; };
 		77C033602A4DC581008E95D6 /* JGHomeLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0335F2A4DC581008E95D6 /* JGHomeLogo.swift */; };
 		77C033632A4DC8E3008E95D6 /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033622A4DC8E3008E95D6 /* HomeListCell.swift */; };
+		77C033662A4DE964008E95D6 /* MOUListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033652A4DE964008E95D6 /* MOUListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		77C033522A4C4B01008E95D6 /* ProfileFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlow.swift; sourceTree = "<group>"; };
 		77C0335F2A4DC581008E95D6 /* JGHomeLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGHomeLogo.swift; sourceTree = "<group>"; };
 		77C033622A4DC8E3008E95D6 /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
+		77C033652A4DE964008E95D6 /* MOUListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOUListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +395,7 @@
 		77C033382A4C30A5008E95D6 /* MOU */ = {
 			isa = PBXGroup;
 			children = (
+				77C033642A4DE956008E95D6 /* Cell */,
 				77C0333A2A4C30AF008E95D6 /* ViewModel */,
 				77C033392A4C30AB008E95D6 /* View */,
 			);
@@ -478,6 +481,14 @@
 			isa = PBXGroup;
 			children = (
 				77C033622A4DC8E3008E95D6 /* HomeListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		77C033642A4DE956008E95D6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				77C033652A4DE964008E95D6 /* MOUListCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -597,6 +608,7 @@
 				775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */,
 				775BE4C62A4AF99D00DD68CD /* InsertInfoViewModel.swift in Sources */,
 				775BE4B22A49A43F00DD68CD /* OnBoardingFlow.swift in Sources */,
+				77C033662A4DE964008E95D6 /* MOUListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
