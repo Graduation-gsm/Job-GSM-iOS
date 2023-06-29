@@ -7,6 +7,7 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.leftBarButtonItem()
     }
     
     init() {
