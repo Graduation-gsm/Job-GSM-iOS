@@ -7,6 +7,7 @@ class MOUViewController: BaseViewController<MOUViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.leftBarButtonItem()
     }
     
     init() {
