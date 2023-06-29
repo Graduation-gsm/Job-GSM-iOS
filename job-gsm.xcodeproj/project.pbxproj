@@ -44,7 +44,8 @@
 		77C0334F2A4C4ADF008E95D6 /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0334E2A4C4ADF008E95D6 /* HomeFlow.swift */; };
 		77C033512A4C4AF5008E95D6 /* MOUFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033502A4C4AF5008E95D6 /* MOUFlow.swift */; };
 		77C033532A4C4B01008E95D6 /* ProfileFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033522A4C4B01008E95D6 /* ProfileFlow.swift */; };
-		77C033562A4D791F008E95D6 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033552A4D791F008E95D6 /* UINavigationBar.swift */; };
+		77C033602A4DC581008E95D6 /* JGHomeLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0335F2A4DC581008E95D6 /* JGHomeLogo.swift */; };
+		77C033632A4DC8E3008E95D6 /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033622A4DC8E3008E95D6 /* HomeListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,7 +84,8 @@
 		77C0334E2A4C4ADF008E95D6 /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
 		77C033502A4C4AF5008E95D6 /* MOUFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOUFlow.swift; sourceTree = "<group>"; };
 		77C033522A4C4B01008E95D6 /* ProfileFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlow.swift; sourceTree = "<group>"; };
-		77C033552A4D791F008E95D6 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		77C0335F2A4DC581008E95D6 /* JGHomeLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGHomeLogo.swift; sourceTree = "<group>"; };
+		77C033622A4DC8E3008E95D6 /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,7 +290,6 @@
 				775BE4BE2A49A85500DD68CD /* UIColor.swift */,
 				775BE4C02A49DB0F00DD68CD /* Bundle.swift */,
 				775BE4D02A4C205F00DD68CD /* TextField.swift */,
-				77C033552A4D791F008E95D6 /* UINavigationBar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -321,6 +322,7 @@
 		775BE4C92A4AFBDB00DD68CD /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				77C0335E2A4DC56E008E95D6 /* HomeLogo */,
 				775BE4D22A4C27FB00DD68CD /* Button */,
 				775BE4CA2A4AFBE800DD68CD /* TextField */,
 			);
@@ -356,6 +358,7 @@
 		77C0332E2A4C2F38008E95D6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				77C033612A4DC8D5008E95D6 /* Cell */,
 				77C033302A4C2F67008E95D6 /* ViewModel */,
 				77C0332F2A4C2F63008E95D6 /* View */,
 			);
@@ -463,6 +466,22 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		77C0335E2A4DC56E008E95D6 /* HomeLogo */ = {
+			isa = PBXGroup;
+			children = (
+				77C0335F2A4DC581008E95D6 /* JGHomeLogo.swift */,
+			);
+			path = HomeLogo;
+			sourceTree = "<group>";
+		};
+		77C033612A4DC8D5008E95D6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				77C033622A4DC8E3008E95D6 /* HomeListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -550,6 +569,7 @@
 			files = (
 				77C033372A4C2FFA008E95D6 /* HomeViewModel.swift in Sources */,
 				775BE4C12A49DB0F00DD68CD /* Bundle.swift in Sources */,
+				77C033602A4DC581008E95D6 /* JGHomeLogo.swift in Sources */,
 				775BE4C82A4AFAE500DD68CD /* InsertInfoViewController.swift in Sources */,
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
 				775BE4D62A4C281B00DD68CD /* JGButton.swift in Sources */,
@@ -573,7 +593,7 @@
 				775BE4A82A49A19A00DD68CD /* OnBoardingViewController.swift in Sources */,
 				775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */,
 				77C0334D2A4C4978008E95D6 /* JGTabBar.swift in Sources */,
-				77C033562A4D791F008E95D6 /* UINavigationBar.swift in Sources */,
+				77C033632A4DC8E3008E95D6 /* HomeListCell.swift in Sources */,
 				775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */,
 				775BE4C62A4AF99D00DD68CD /* InsertInfoViewModel.swift in Sources */,
 				775BE4B22A49A43F00DD68CD /* OnBoardingFlow.swift in Sources */,
