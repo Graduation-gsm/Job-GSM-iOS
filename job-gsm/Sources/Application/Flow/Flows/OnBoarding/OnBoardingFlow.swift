@@ -21,6 +21,8 @@ class OnBoardingFlow: Flow {
             return coordinateToOnBoarding()
         case .insertInfoIsRequired:
             return coordinateInsertInfo()
+        case .tabBarIsRequired:
+            return .end(forwardToParentFlowWithStep: JGStep.tabBarIsRequired)
         default:
             return .none
         }
@@ -30,15 +32,15 @@ class OnBoardingFlow: Flow {
 private extension OnBoardingFlow {
     private func coordinateToOnBoarding() -> FlowContributors {
         let vm = OnBoardingViewModel()
-        let vc = OnBoardingViewController()
+        let vc = OnBoardingViewController(vm)
         self.rootViewController.setViewControllers([vc], animated: false)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vm))
     }
     
     private func coordinateInsertInfo() -> FlowContributors {
         let vm = InsertInfoViewModel()
-        let vc = InsertInfoViewController()
-        self.rootViewController.pushViewController(vc, animated: false)
+        let vc = InsertInfoViewController(vm)
+        self.rootViewController.setViewControllers([vc], animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vm))
     }
 }

@@ -3,7 +3,6 @@ import SnapKit
 import Then
 
 class ProfileViewController: BaseViewController<ProfileViewModel> {
-    let vm = ProfileViewModel()
     private let cellName = ["전화번호","포트폴리오","지원한회사","전공"]
     private let cellDetail = ["01055136475",">","1","iOS"]
 
@@ -14,14 +13,6 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
         userTableView.dataSource = self
         userTableView.layer.cornerRadius = 10
         userTableView.layer.masksToBounds = true
-    }
-    
-    init() {
-        super.init(vm)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
         
     private let userProfile = UIImageView().then {

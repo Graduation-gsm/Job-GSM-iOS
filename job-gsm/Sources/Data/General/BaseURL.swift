@@ -7,5 +7,5 @@
 
 import Foundation
 struct BaseURL {
-    static let baseURL = "https://port-0-job-gsm-backend-kvmh2mljm9p2ms.sel4.cloudtype.app/"
+    static let baseURL = "https://port-0-job-gsm-backend-kvmh2mljm9p2ms.sel4.cloudtype.app/api/v1"
 }

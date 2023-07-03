@@ -5,7 +5,6 @@ import RxCocoa
 import RxSwift
 
 class InsertInfoViewController: BaseViewController<InsertInfoViewModel> {
-    let vm = InsertInfoViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +17,6 @@ class InsertInfoViewController: BaseViewController<InsertInfoViewModel> {
             buttonDidTap: completeButton.rx.tap.asObservable()
         )
         viewModel.transVC(input: input)
-    }
-    
-    init() {
-        super.init(vm)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
     private let phoneNumText = UILabel().then {

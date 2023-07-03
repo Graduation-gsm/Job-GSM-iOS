@@ -46,7 +46,7 @@ class ProfileFlow: Flow {
     
     private func coordinateToProfile() -> FlowContributors {
         let vm = ProfileViewModel()
-        let vc = ProfileViewController()
+        let vc = ProfileViewController(vm)
         self.rootViewController.pushViewController(vc, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vm))
     }

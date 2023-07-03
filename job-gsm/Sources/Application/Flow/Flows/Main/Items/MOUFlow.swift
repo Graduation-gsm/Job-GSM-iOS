@@ -46,7 +46,7 @@ class MOUFlow: Flow {
     
     private func coordinateToMOU() -> FlowContributors {
         let vm = MOUViewModel()
-        let vc = MOUViewController()
+        let vc = MOUViewController(vm)
         self.rootViewController.pushViewController(vc, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vm))
     }
