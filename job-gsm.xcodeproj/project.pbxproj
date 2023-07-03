@@ -53,6 +53,7 @@
 		77C033772A52BD2C008E95D6 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033762A52BD2C008E95D6 /* SignInRequest.swift */; };
 		77C0337A2A52BD62008E95D6 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033792A52BD62008E95D6 /* AuthServices.swift */; };
 		77C0337D2A52BDD3008E95D6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 77C0337C2A52BDD3008E95D6 /* Moya */; };
+		77C033802A52DE02008E95D6 /* RefreshTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0337F2A52DE02008E95D6 /* RefreshTokenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,7 @@
 		77C033722A52BCB0008E95D6 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		77C033762A52BD2C008E95D6 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		77C033792A52BD62008E95D6 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
+		77C0337F2A52DE02008E95D6 /* RefreshTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -553,6 +555,7 @@
 		77C033712A52BCA7008E95D6 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				77C0337E2A52DDEF008E95D6 /* RefreshToken */,
 				77C033742A52BCBD008E95D6 /* SignIn */,
 			);
 			path = Auth;
@@ -580,6 +583,14 @@
 				77C033792A52BD62008E95D6 /* AuthServices.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		77C0337E2A52DDEF008E95D6 /* RefreshToken */ = {
+			isa = PBXGroup;
+			children = (
+				77C0337F2A52DE02008E95D6 /* RefreshTokenModel.swift */,
+			);
+			path = RefreshToken;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -674,6 +685,7 @@
 				77C033602A4DC581008E95D6 /* JGHomeLogo.swift in Sources */,
 				775BE4C82A4AFAE500DD68CD /* InsertInfoViewController.swift in Sources */,
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
+				77C033802A52DE02008E95D6 /* RefreshTokenModel.swift in Sources */,
 				775BE4D62A4C281B00DD68CD /* JGButton.swift in Sources */,
 				77C033772A52BD2C008E95D6 /* SignInRequest.swift in Sources */,
 				775BE4BF2A49A85500DD68CD /* UIColor.swift in Sources */,
