@@ -48,6 +48,7 @@
 		77C033632A4DC8E3008E95D6 /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033622A4DC8E3008E95D6 /* HomeListCell.swift */; };
 		77C033662A4DE964008E95D6 /* MOUListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033652A4DE964008E95D6 /* MOUListCell.swift */; };
 		77C033692A52A7E1008E95D6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033682A52A7E1008E95D6 /* UserCell.swift */; };
+		77C033702A52B88B008E95D6 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0336F2A52B88B008E95D6 /* BaseURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		77C033622A4DC8E3008E95D6 /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		77C033652A4DE964008E95D6 /* MOUListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOUListCell.swift; sourceTree = "<group>"; };
 		77C033682A52A7E1008E95D6 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		77C0336F2A52B88B008E95D6 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,10 @@
 		775BE48F2A49808E00DD68CD /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				77C0336A2A52B82F008E95D6 /* General */,
+				77C0336B2A52B83E008E95D6 /* Model */,
+				77C0336C2A52B851008E95D6 /* Request */,
+				77C0336D2A52B868008E95D6 /* Services */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -504,6 +510,35 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		77C0336A2A52B82F008E95D6 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				77C0336F2A52B88B008E95D6 /* BaseURL.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		77C0336B2A52B83E008E95D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77C0336C2A52B851008E95D6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		77C0336D2A52B868008E95D6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -621,6 +656,7 @@
 				775BE4C62A4AF99D00DD68CD /* InsertInfoViewModel.swift in Sources */,
 				775BE4B22A49A43F00DD68CD /* OnBoardingFlow.swift in Sources */,
 				77C033662A4DE964008E95D6 /* MOUListCell.swift in Sources */,
+				77C033702A52B88B008E95D6 /* BaseURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
