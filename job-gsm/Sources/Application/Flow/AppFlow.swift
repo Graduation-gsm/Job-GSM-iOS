@@ -6,11 +6,21 @@ import RxCocoa
 struct AppStepper: Stepper {
     let steps = PublishRelay<Step>()
     private let disposeBag = DisposeBag()
+    private let gomsRefreshToken = JGRefreshToken.shared
 
     init() {}
     
-    var initialStep: Step {
-        return JGStep.onBoardingIsRequired
+    func readyToEmitSteps() {
+        self.gomsRefreshToken.autoLogin {
+            switch gomsRefreshToken.statusCode {
+            case 200..<300:
+                print(gomsRefreshToken.statusCode)
+                steps.accept(JGStep.tabBarIsRequired)
+            default:
+                print(gomsRefreshToken.statusCode)
+                steps.accept(JGStep.onBoardingIsRequired)
+            }
+        }
     }
 }
 
