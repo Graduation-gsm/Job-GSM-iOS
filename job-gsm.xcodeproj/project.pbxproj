@@ -51,6 +51,7 @@
 		77C033702A52B88B008E95D6 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0336F2A52B88B008E95D6 /* BaseURL.swift */; };
 		77C033732A52BCB0008E95D6 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033722A52BCB0008E95D6 /* SignInModel.swift */; };
 		77C033772A52BD2C008E95D6 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033762A52BD2C008E95D6 /* SignInRequest.swift */; };
+		77C0337A2A52BD62008E95D6 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033792A52BD62008E95D6 /* AuthServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		77C0336F2A52B88B008E95D6 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		77C033722A52BCB0008E95D6 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		77C033762A52BD2C008E95D6 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
+		77C033792A52BD62008E95D6 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -541,6 +543,7 @@
 		77C0336D2A52B868008E95D6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				77C033782A52BD54008E95D6 /* Auth */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -565,6 +568,14 @@
 			isa = PBXGroup;
 			children = (
 				77C033762A52BD2C008E95D6 /* SignInRequest.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		77C033782A52BD54008E95D6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				77C033792A52BD62008E95D6 /* AuthServices.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -669,6 +680,7 @@
 				775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */,
 				77C0334F2A4C4ADF008E95D6 /* HomeFlow.swift in Sources */,
 				77C033512A4C4AF5008E95D6 /* MOUFlow.swift in Sources */,
+				77C0337A2A52BD62008E95D6 /* AuthServices.swift in Sources */,
 				77C0333E2A4C30D1008E95D6 /* MOUViewModel.swift in Sources */,
 				77C033532A4C4B01008E95D6 /* ProfileFlow.swift in Sources */,
 				775BE4D12A4C205F00DD68CD /* TextField.swift in Sources */,
