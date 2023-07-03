@@ -48,6 +48,11 @@
 		77C033632A4DC8E3008E95D6 /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033622A4DC8E3008E95D6 /* HomeListCell.swift */; };
 		77C033662A4DE964008E95D6 /* MOUListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033652A4DE964008E95D6 /* MOUListCell.swift */; };
 		77C033692A52A7E1008E95D6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033682A52A7E1008E95D6 /* UserCell.swift */; };
+		77C033702A52B88B008E95D6 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0336F2A52B88B008E95D6 /* BaseURL.swift */; };
+		77C033732A52BCB0008E95D6 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033722A52BCB0008E95D6 /* SignInModel.swift */; };
+		77C033772A52BD2C008E95D6 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033762A52BD2C008E95D6 /* SignInRequest.swift */; };
+		77C0337A2A52BD62008E95D6 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033792A52BD62008E95D6 /* AuthServices.swift */; };
+		77C0337D2A52BDD3008E95D6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 77C0337C2A52BDD3008E95D6 /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +95,10 @@
 		77C033622A4DC8E3008E95D6 /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		77C033652A4DE964008E95D6 /* MOUListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOUListCell.swift; sourceTree = "<group>"; };
 		77C033682A52A7E1008E95D6 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		77C0336F2A52B88B008E95D6 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		77C033722A52BCB0008E95D6 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		77C033762A52BD2C008E95D6 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
+		77C033792A52BD62008E95D6 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +109,7 @@
 				775BE4A32A49A13B00DD68CD /* SnapKit in Frameworks */,
 				775BE4A02A49A12D00DD68CD /* GAuthSignin in Frameworks */,
 				775BE48B2A4950D500DD68CD /* RxFlow in Frameworks */,
+				77C0337D2A52BDD3008E95D6 /* Moya in Frameworks */,
 				775BE4A62A49A14E00DD68CD /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +176,10 @@
 		775BE48F2A49808E00DD68CD /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				77C0336A2A52B82F008E95D6 /* General */,
+				77C0336B2A52B83E008E95D6 /* Model */,
+				77C0336C2A52B851008E95D6 /* Request */,
+				77C0336D2A52B868008E95D6 /* Services */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -504,6 +518,70 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		77C0336A2A52B82F008E95D6 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				77C0336F2A52B88B008E95D6 /* BaseURL.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		77C0336B2A52B83E008E95D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77C033712A52BCA7008E95D6 /* Auth */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77C0336C2A52B851008E95D6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				77C033752A52BD12008E95D6 /* Auth */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		77C0336D2A52B868008E95D6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				77C033782A52BD54008E95D6 /* Auth */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		77C033712A52BCA7008E95D6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				77C033742A52BCBD008E95D6 /* SignIn */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		77C033742A52BCBD008E95D6 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				77C033722A52BCB0008E95D6 /* SignInModel.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		77C033752A52BD12008E95D6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				77C033762A52BD2C008E95D6 /* SignInRequest.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		77C033782A52BD54008E95D6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				77C033792A52BD62008E95D6 /* AuthServices.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -525,6 +603,7 @@
 				775BE49F2A49A12D00DD68CD /* GAuthSignin */,
 				775BE4A22A49A13B00DD68CD /* SnapKit */,
 				775BE4A52A49A14E00DD68CD /* Then */,
+				77C0337C2A52BDD3008E95D6 /* Moya */,
 			);
 			productName = "job-gsm";
 			productReference = 775BE4722A490E1F00DD68CD /* job-gsm.app */;
@@ -559,6 +638,7 @@
 				775BE49E2A49A12D00DD68CD /* XCRemoteSwiftPackageReference "GAuthSignin-Swift" */,
 				775BE4A12A49A13B00DD68CD /* XCRemoteSwiftPackageReference "SnapKit" */,
 				775BE4A42A49A14E00DD68CD /* XCRemoteSwiftPackageReference "Then" */,
+				77C0337B2A52BDD3008E95D6 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 775BE4732A490E1F00DD68CD /* Products */;
 			projectDirPath = "";
@@ -595,6 +675,7 @@
 				775BE4C82A4AFAE500DD68CD /* InsertInfoViewController.swift in Sources */,
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
 				775BE4D62A4C281B00DD68CD /* JGButton.swift in Sources */,
+				77C033772A52BD2C008E95D6 /* SignInRequest.swift in Sources */,
 				775BE4BF2A49A85500DD68CD /* UIColor.swift in Sources */,
 				77C033442A4C312B008E95D6 /* ProfileViewController.swift in Sources */,
 				77C033692A52A7E1008E95D6 /* UserCell.swift in Sources */,
@@ -603,6 +684,7 @@
 				775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */,
 				77C0334F2A4C4ADF008E95D6 /* HomeFlow.swift in Sources */,
 				77C033512A4C4AF5008E95D6 /* MOUFlow.swift in Sources */,
+				77C0337A2A52BD62008E95D6 /* AuthServices.swift in Sources */,
 				77C0333E2A4C30D1008E95D6 /* MOUViewModel.swift in Sources */,
 				77C033532A4C4B01008E95D6 /* ProfileFlow.swift in Sources */,
 				775BE4D12A4C205F00DD68CD /* TextField.swift in Sources */,
@@ -616,11 +698,13 @@
 				775BE4A82A49A19A00DD68CD /* OnBoardingViewController.swift in Sources */,
 				775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */,
 				77C0334D2A4C4978008E95D6 /* JGTabBar.swift in Sources */,
+				77C033732A52BCB0008E95D6 /* SignInModel.swift in Sources */,
 				77C033632A4DC8E3008E95D6 /* HomeListCell.swift in Sources */,
 				775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */,
 				775BE4C62A4AF99D00DD68CD /* InsertInfoViewModel.swift in Sources */,
 				775BE4B22A49A43F00DD68CD /* OnBoardingFlow.swift in Sources */,
 				77C033662A4DE964008E95D6 /* MOUListCell.swift in Sources */,
+				77C033702A52B88B008E95D6 /* BaseURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,6 +946,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		77C0337B2A52BDD3008E95D6 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -884,6 +976,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 775BE4A42A49A14E00DD68CD /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		77C0337C2A52BDD3008E95D6 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77C0337B2A52BDD3008E95D6 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
