@@ -38,7 +38,12 @@ extension OnBoardingViewModel {
                 switch statusCode{
                 case 200..<300:
                     self.addKeychainToken()
-                    self.steps.accept(JGStep.tabBarIsRequired)
+                    if self.authData?.isExist == false {
+                        self.steps.accept(JGStep.insertInfoIsRequired)
+                    }
+                    else {
+                        self.steps.accept(JGStep.tabBarIsRequired)
+                    }
                 case 400: break
                 default:
                     print("ERROR")
