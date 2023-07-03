@@ -49,6 +49,7 @@
 		77C033662A4DE964008E95D6 /* MOUListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033652A4DE964008E95D6 /* MOUListCell.swift */; };
 		77C033692A52A7E1008E95D6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033682A52A7E1008E95D6 /* UserCell.swift */; };
 		77C033702A52B88B008E95D6 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0336F2A52B88B008E95D6 /* BaseURL.swift */; };
+		77C033732A52BCB0008E95D6 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033722A52BCB0008E95D6 /* SignInModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		77C033652A4DE964008E95D6 /* MOUListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOUListCell.swift; sourceTree = "<group>"; };
 		77C033682A52A7E1008E95D6 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		77C0336F2A52B88B008E95D6 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		77C033722A52BCB0008E95D6 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -521,6 +523,7 @@
 		77C0336B2A52B83E008E95D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				77C033712A52BCA7008E95D6 /* Auth */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -537,6 +540,22 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		77C033712A52BCA7008E95D6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				77C033742A52BCBD008E95D6 /* SignIn */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		77C033742A52BCBD008E95D6 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				77C033722A52BCB0008E95D6 /* SignInModel.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -651,6 +670,7 @@
 				775BE4A82A49A19A00DD68CD /* OnBoardingViewController.swift in Sources */,
 				775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */,
 				77C0334D2A4C4978008E95D6 /* JGTabBar.swift in Sources */,
+				77C033732A52BCB0008E95D6 /* SignInModel.swift in Sources */,
 				77C033632A4DC8E3008E95D6 /* HomeListCell.swift in Sources */,
 				775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */,
 				775BE4C62A4AF99D00DD68CD /* InsertInfoViewModel.swift in Sources */,
