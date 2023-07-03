@@ -19,7 +19,7 @@ class BaseViewController<T>: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.tintColor = .b10
         self.view.backgroundColor = .white
         self.navigationItem.backButtonTitle = ""
         addView()

@@ -18,7 +18,7 @@ public final class JGTextField: UITextField {
         self.placeholder = placeholder
         self.backgroundColor = .f20
         self.layer.cornerRadius = 8
-        self.textColor = .black
+        self.textColor = .b10
     }
     
     public override func becomeFirstResponder() -> Bool {

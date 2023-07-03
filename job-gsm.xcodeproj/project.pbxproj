@@ -47,6 +47,7 @@
 		77C033602A4DC581008E95D6 /* JGHomeLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0335F2A4DC581008E95D6 /* JGHomeLogo.swift */; };
 		77C033632A4DC8E3008E95D6 /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033622A4DC8E3008E95D6 /* HomeListCell.swift */; };
 		77C033662A4DE964008E95D6 /* MOUListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033652A4DE964008E95D6 /* MOUListCell.swift */; };
+		77C033692A52A7E1008E95D6 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033682A52A7E1008E95D6 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		77C0335F2A4DC581008E95D6 /* JGHomeLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGHomeLogo.swift; sourceTree = "<group>"; };
 		77C033622A4DC8E3008E95D6 /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		77C033652A4DE964008E95D6 /* MOUListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOUListCell.swift; sourceTree = "<group>"; };
+		77C033682A52A7E1008E95D6 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,6 +423,7 @@
 		77C0333F2A4C3102008E95D6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				77C033672A52A7CE008E95D6 /* Cell */,
 				77C033412A4C310C008E95D6 /* ViewModel */,
 				77C033402A4C3108008E95D6 /* View */,
 			);
@@ -489,6 +492,14 @@
 			isa = PBXGroup;
 			children = (
 				77C033652A4DE964008E95D6 /* MOUListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		77C033672A52A7CE008E95D6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				77C033682A52A7E1008E95D6 /* UserCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -586,6 +597,7 @@
 				775BE4D62A4C281B00DD68CD /* JGButton.swift in Sources */,
 				775BE4BF2A49A85500DD68CD /* UIColor.swift in Sources */,
 				77C033442A4C312B008E95D6 /* ProfileViewController.swift in Sources */,
+				77C033692A52A7E1008E95D6 /* UserCell.swift in Sources */,
 				77C033322A4C2F8A008E95D6 /* HomeViewController.swift in Sources */,
 				775BE4AA2A49A2E500DD68CD /* AppFlow.swift in Sources */,
 				775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */,
