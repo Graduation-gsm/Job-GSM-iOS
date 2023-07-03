@@ -6,8 +6,8 @@ struct SignInModel: Codable {
 
 struct SignInResponse: Codable {
     let accessToken: String
-    let refreshToken: String
     let accessTokenExpiredAt: String
+    let refreshToken: String
     let refreshTokenExpiredAt: String
     let isExist: Bool
 }

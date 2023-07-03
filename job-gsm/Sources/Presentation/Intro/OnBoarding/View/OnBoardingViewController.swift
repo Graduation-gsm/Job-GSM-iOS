@@ -11,19 +11,10 @@ import Then
 import GAuthSignin
 
 class OnBoardingViewController: BaseViewController<OnBoardingViewModel> {
-    let vm = OnBoardingViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         gauthButtonSetUp()
-    }
-    
-    init(){
-        super.init(vm)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     private let logo = UIImageView().then {
@@ -54,8 +45,7 @@ class OnBoardingViewController: BaseViewController<OnBoardingViewModel> {
             redirectURI: Bundle.module.object(forInfoDictionaryKey: "REDIREDCT_URI") as? String ?? "",
             presenting: self
         ) { code in
-            print(code)
-            self.viewModel.steps.accept(JGStep.insertInfoIsRequired)
+            self.viewModel.gauthSignInCompleted(code: code)
         }
     }
     
