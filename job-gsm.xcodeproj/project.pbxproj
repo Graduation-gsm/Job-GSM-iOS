@@ -54,6 +54,7 @@
 		77C0337A2A52BD62008E95D6 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033792A52BD62008E95D6 /* AuthServices.swift */; };
 		77C0337D2A52BDD3008E95D6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 77C0337C2A52BDD3008E95D6 /* Moya */; };
 		77C033802A52DE02008E95D6 /* RefreshTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0337F2A52DE02008E95D6 /* RefreshTokenModel.swift */; };
+		77C033842A52DF78008E95D6 /* JGToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033832A52DF78008E95D6 /* JGToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		77C033762A52BD2C008E95D6 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		77C033792A52BD62008E95D6 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		77C0337F2A52DE02008E95D6 /* RefreshTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenModel.swift; sourceTree = "<group>"; };
+		77C033832A52DF78008E95D6 /* JGToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +312,7 @@
 				775BE4BE2A49A85500DD68CD /* UIColor.swift */,
 				775BE4C02A49DB0F00DD68CD /* Bundle.swift */,
 				775BE4D02A4C205F00DD68CD /* TextField.swift */,
+				77C033832A52DF78008E95D6 /* JGToken.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */,
 				77C0334F2A4C4ADF008E95D6 /* HomeFlow.swift in Sources */,
 				77C033512A4C4AF5008E95D6 /* MOUFlow.swift in Sources */,
+				77C033842A52DF78008E95D6 /* JGToken.swift in Sources */,
 				77C0337A2A52BD62008E95D6 /* AuthServices.swift in Sources */,
 				77C0333E2A4C30D1008E95D6 /* MOUViewModel.swift in Sources */,
 				77C033532A4C4B01008E95D6 /* ProfileFlow.swift in Sources */,

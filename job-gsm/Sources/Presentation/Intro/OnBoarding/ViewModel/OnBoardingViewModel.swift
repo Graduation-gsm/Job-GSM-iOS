@@ -37,6 +37,7 @@ extension OnBoardingViewModel {
                 print(statusCode)
                 switch statusCode{
                 case 200..<300:
+                    self.addKeychainToken()
                     self.steps.accept(JGStep.tabBarIsRequired)
                 case 400: break
                 default:
@@ -46,5 +47,16 @@ extension OnBoardingViewModel {
                 print(String(describing: err))
             }
         }
+    }
+    
+    func addKeychainToken() {
+        self.keychain.create(
+            key: Const.KeychainKey.accessToken,
+            token: self.authData?.accessToken ?? ""
+        )
+        self.keychain.create(
+            key: Const.KeychainKey.refreshToken,
+            token: self.authData?.refreshToken ?? ""
+        )
     }
 }
