@@ -43,8 +43,28 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
         $0.isScrollEnabled = false
     }
     
+    private var logoutButton = UIButton().then {
+        $0.backgroundColor = .f20
+        $0.layer.cornerRadius = 20
+    }
+    
+    private let logoutText = UILabel().then {
+        $0.text = "로그아웃"
+        $0.font = UIFont.JGFont(size: 14, family: .Medium)
+        $0.textColor = UIColor(
+            red: 255 / 255,
+            green: 126 / 255,
+            blue: 126 / 255,
+            alpha: 1
+        )
+    }
+    
+    private let logoutIcon = UIImageView().then {
+        $0.image = UIImage(named: "logoutIcon.svg")
+    }
+    
     override func addView() {
-        [userProfile, userName, userTableView].forEach {
+        [userProfile, userName, userTableView, logoutButton, logoutText, logoutIcon].forEach {
             view.addSubview($0)
         }
     }
@@ -64,6 +84,19 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
             $0.leading.equalToSuperview().offset(26)
             $0.trailing.equalToSuperview().inset(26)
             $0.bottom.equalTo(view.snp.bottom).inset((bounds.height) / 2.90)
+        }
+        logoutButton.snp.makeConstraints {
+            $0.top.equalTo(userTableView.snp.bottom).offset(34)
+            $0.leading.trailing.equalToSuperview().inset(26)
+            $0.height.equalTo(67)
+        }
+        logoutText.snp.makeConstraints {
+            $0.centerY.equalTo(logoutButton.snp.centerY).offset(0)
+            $0.leading.equalTo(logoutButton.snp.leading).offset(24)
+        }
+        logoutIcon.snp.makeConstraints {
+            $0.centerY.equalTo(logoutButton.snp.centerY).offset(0)
+            $0.trailing.equalTo(logoutButton.snp.trailing).inset(24)
         }
     }
 }
