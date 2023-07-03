@@ -9,7 +9,7 @@ class JGRefreshToken {
     var steps = PublishRelay<Step>()
     var statusCode: Int = 0
     private let authProvider = MoyaProvider<AuthServices>()
-    private var reissuanceData: SignInResponse?
+    private var reissuanceData: RefreshTokenResponse?
     private let keychain = Keychain()
     private lazy var refreshToken = "Bearer " + (keychain.read(key: Const.KeychainKey.refreshToken) ?? "")
     
@@ -21,7 +21,7 @@ class JGRefreshToken {
             case .success(let result):
                 self.statusCode = result.statusCode
                 do {
-                    self.reissuanceData = try result.map(SignInResponse.self)
+                    self.reissuanceData = try result.map(RefreshTokenResponse.self)
                 }catch(let err) {
                     print(String(describing: err))
                 }
@@ -46,9 +46,14 @@ class JGRefreshToken {
                 self.statusCode = result.statusCode
                 completion()
                 do {
-                    self.reissuanceData = try result.map(SignInResponse.self)
+                    self.reissuanceData = try result.map(RefreshTokenResponse.self)
                 }catch(let err) {
                     print(String(describing: err))
+                }
+                switch self.statusCode {
+                case 200..<300:
+                    self.updateKeychainToken()
+                default: break;
                 }
             case .failure(let err):
                 print(String(describing: err))
