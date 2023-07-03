@@ -3,6 +3,7 @@ import Moya
 
 enum AuthServices {
     case signIn(param: SignInRequest)
+    case refresh(refreshToken: String)
 }
 
 
@@ -15,6 +16,8 @@ extension AuthServices: TargetType {
         switch self {
         case .signIn:
             return "/auth/signin"
+        case .refresh:
+            return "/auth/"
         }
     }
     
@@ -22,6 +25,8 @@ extension AuthServices: TargetType {
         switch self {
         case .signIn:
             return .post
+        case .refresh:
+            return .patch
         }
     }
     
@@ -33,11 +38,15 @@ extension AuthServices: TargetType {
         switch self {
         case .signIn(let param):
             return .requestJSONEncodable(param)
+        case .refresh:
+            return .requestPlain
         }
     }
     
     var headers: [String : String]? {
         switch self {
+        case .refresh(let refreshToken):
+            return["Content-Type" :"application/json", "refreshToken" : refreshToken]
         default:
             return["Content-Type" :"application/json"]
         }
