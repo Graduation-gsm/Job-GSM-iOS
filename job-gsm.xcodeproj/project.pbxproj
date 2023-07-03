@@ -55,6 +55,7 @@
 		77C0337D2A52BDD3008E95D6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 77C0337C2A52BDD3008E95D6 /* Moya */; };
 		77C033802A52DE02008E95D6 /* RefreshTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0337F2A52DE02008E95D6 /* RefreshTokenModel.swift */; };
 		77C033842A52DF78008E95D6 /* JGToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033832A52DF78008E95D6 /* JGToken.swift */; };
+		77C033862A52E014008E95D6 /* JGRefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033852A52E014008E95D6 /* JGRefreshToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		77C033792A52BD62008E95D6 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		77C0337F2A52DE02008E95D6 /* RefreshTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenModel.swift; sourceTree = "<group>"; };
 		77C033832A52DF78008E95D6 /* JGToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGToken.swift; sourceTree = "<group>"; };
+		77C033852A52E014008E95D6 /* JGRefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGRefreshToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 				775BE4C02A49DB0F00DD68CD /* Bundle.swift */,
 				775BE4D02A4C205F00DD68CD /* TextField.swift */,
 				77C033832A52DF78008E95D6 /* JGToken.swift */,
+				77C033852A52E014008E95D6 /* JGRefreshToken.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 				77C033732A52BCB0008E95D6 /* SignInModel.swift in Sources */,
 				77C033632A4DC8E3008E95D6 /* HomeListCell.swift in Sources */,
 				775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */,
+				77C033862A52E014008E95D6 /* JGRefreshToken.swift in Sources */,
 				775BE4C62A4AF99D00DD68CD /* InsertInfoViewModel.swift in Sources */,
 				775BE4B22A49A43F00DD68CD /* OnBoardingFlow.swift in Sources */,
 				77C033662A4DE964008E95D6 /* MOUListCell.swift in Sources */,
