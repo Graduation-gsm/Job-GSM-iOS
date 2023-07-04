@@ -56,6 +56,7 @@
 		77C033802A52DE02008E95D6 /* RefreshTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0337F2A52DE02008E95D6 /* RefreshTokenModel.swift */; };
 		77C033842A52DF78008E95D6 /* JGToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033832A52DF78008E95D6 /* JGToken.swift */; };
 		77C033862A52E014008E95D6 /* JGRefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033852A52E014008E95D6 /* JGRefreshToken.swift */; };
+		77C0339F2A54E7B7008E95D6 /* HomeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0339E2A54E7B7008E95D6 /* HomeListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		77C0337F2A52DE02008E95D6 /* RefreshTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenModel.swift; sourceTree = "<group>"; };
 		77C033832A52DF78008E95D6 /* JGToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGToken.swift; sourceTree = "<group>"; };
 		77C033852A52E014008E95D6 /* JGRefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGRefreshToken.swift; sourceTree = "<group>"; };
+		77C0339E2A54E7B7008E95D6 /* HomeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -537,6 +539,7 @@
 		77C0336B2A52B83E008E95D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				77C0339C2A54E787008E95D6 /* Job */,
 				77C033712A52BCA7008E95D6 /* Auth */,
 			);
 			path = Model;
@@ -597,6 +600,22 @@
 				77C0337F2A52DE02008E95D6 /* RefreshTokenModel.swift */,
 			);
 			path = RefreshToken;
+			sourceTree = "<group>";
+		};
+		77C0339C2A54E787008E95D6 /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				77C0339D2A54E7A6008E95D6 /* HomeList */,
+			);
+			path = Job;
+			sourceTree = "<group>";
+		};
+		77C0339D2A54E7A6008E95D6 /* HomeList */ = {
+			isa = PBXGroup;
+			children = (
+				77C0339E2A54E7B7008E95D6 /* HomeListModel.swift */,
+			);
+			path = HomeList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -706,6 +725,7 @@
 				77C0337A2A52BD62008E95D6 /* AuthServices.swift in Sources */,
 				77C0333E2A4C30D1008E95D6 /* MOUViewModel.swift in Sources */,
 				77C033532A4C4B01008E95D6 /* ProfileFlow.swift in Sources */,
+				77C0339F2A54E7B7008E95D6 /* HomeListModel.swift in Sources */,
 				775BE4D12A4C205F00DD68CD /* TextField.swift in Sources */,
 				775BE4CC2A4AFC1100DD68CD /* JGTextField.swift in Sources */,
 				775BE4962A49867800DD68CD /* BaseViewController.swift in Sources */,
