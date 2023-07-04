@@ -57,6 +57,7 @@
 		77C033842A52DF78008E95D6 /* JGToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033832A52DF78008E95D6 /* JGToken.swift */; };
 		77C033862A52E014008E95D6 /* JGRefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033852A52E014008E95D6 /* JGRefreshToken.swift */; };
 		77C0339F2A54E7B7008E95D6 /* HomeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0339E2A54E7B7008E95D6 /* HomeListModel.swift */; };
+		77C033A32A54E896008E95D6 /* JobServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033A22A54E896008E95D6 /* JobServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,7 @@
 		77C033832A52DF78008E95D6 /* JGToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGToken.swift; sourceTree = "<group>"; };
 		77C033852A52E014008E95D6 /* JGRefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGRefreshToken.swift; sourceTree = "<group>"; };
 		77C0339E2A54E7B7008E95D6 /* HomeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListModel.swift; sourceTree = "<group>"; };
+		77C033A22A54E896008E95D6 /* JobServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -556,6 +558,7 @@
 		77C0336D2A52B868008E95D6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				77C033A12A54E889008E95D6 /* Job */,
 				77C033782A52BD54008E95D6 /* Auth */,
 			);
 			path = Services;
@@ -616,6 +619,14 @@
 				77C0339E2A54E7B7008E95D6 /* HomeListModel.swift */,
 			);
 			path = HomeList;
+			sourceTree = "<group>";
+		};
+		77C033A12A54E889008E95D6 /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				77C033A22A54E896008E95D6 /* JobServices.swift */,
+			);
+			path = Job;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -709,6 +720,7 @@
 				775BE4C12A49DB0F00DD68CD /* Bundle.swift in Sources */,
 				77C033602A4DC581008E95D6 /* JGHomeLogo.swift in Sources */,
 				775BE4C82A4AFAE500DD68CD /* InsertInfoViewController.swift in Sources */,
+				77C033A32A54E896008E95D6 /* JobServices.swift in Sources */,
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
 				77C033802A52DE02008E95D6 /* RefreshTokenModel.swift in Sources */,
 				775BE4D62A4C281B00DD68CD /* JGButton.swift in Sources */,
