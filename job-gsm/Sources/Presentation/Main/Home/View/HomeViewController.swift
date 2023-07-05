@@ -3,6 +3,7 @@ import SnapKit
 import Then
 import RxCocoa
 import RxSwift
+import Kingfisher
 
 class HomeViewController: BaseViewController<HomeViewModel> {
 
@@ -71,7 +72,8 @@ class HomeViewController: BaseViewController<HomeViewModel> {
             .bind(
                 to: homeListCollectionView.rx.items(cellIdentifier: "HomeListCell", cellType: HomeListCell.self)
             ) { ip, item, cell in
-                cell.companyImage.image = UIImage(named: "DummyImage.svg")
+                let url = URL(string: item.thumbnailUrl)
+                cell.companyImage.kf.setImage(with: url, placeholder: UIImage(named: "DummyImage.svg"))
                 cell.companyName.text = item.companyName
                 cell.companyLocation.text = item.address
             }
