@@ -43,12 +43,6 @@ class HomeViewController: BaseViewController<HomeViewModel> {
         $0.register(HomeListCell.self, forCellWithReuseIdentifier: "HomeListCell")
         $0.isScrollEnabled = true
     }
-
-    override func addView() {
-        [homeLogo, filterButton, homeListCollectionView].forEach {
-            view.addSubview($0)
-        }
-    }
     
     func getData() {
         // MARK: Input
@@ -78,6 +72,12 @@ class HomeViewController: BaseViewController<HomeViewModel> {
                 cell.companyLocation.text = item.address
             }
             .disposed(by: disposeBag)
+    }
+
+    override func addView() {
+        [homeLogo, filterButton, homeListCollectionView].forEach {
+            view.addSubview($0)
+        }
     }
     
     override func setLayout() {
