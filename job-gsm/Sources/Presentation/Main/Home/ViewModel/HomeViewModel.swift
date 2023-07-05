@@ -12,10 +12,11 @@ import RxSwift
 import Moya
 
 class HomeViewModel: BaseViewModel, Stepper{
+    var data: [HomeListResponse] = []
 
     struct Input {
         var viewWillAppear: Observable<Void>
-        var companyCellDidselect: Observable<Float>
+        var companyCellDidselect: Observable<Int>
     }
     
     struct Output {
@@ -33,10 +34,14 @@ class HomeViewModel: BaseViewModel, Stepper{
                     provider.request(.homeList(authorization: self.accessToken)) { result in
                         switch result {
                         case let .success(res):
-                            print(self.accessToken)
-                            let data = try? JSONDecoder().decode([HomeListResponse].self, from: res.data)
-                            observer.onNext(data ?? [])
-                            
+                            let responseData = res.data
+                            do {
+                                self.data = try JSONDecoder().decode([HomeListResponse].self, from: responseData)
+                                observer.onNext(self.data ?? [])
+                                
+                            }catch(let err) {
+                                print(String(describing: err))
+                            }
                         case let .failure(err):
                             observer.onError(err)
                         }

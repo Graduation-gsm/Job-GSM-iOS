@@ -12,9 +12,9 @@ struct HomeListModel: Codable {
 }
 
 struct HomeListResponse: Codable {
-    let idx: Float
+    let idx: Int
     let companyName: String
     let address: String
-    let major: String
+    let major: [String]
     let thumbnailUrl: String
 }
