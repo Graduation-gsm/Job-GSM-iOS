@@ -2,7 +2,7 @@ import Foundation
 import Moya
 
 enum JobServices {
-    case homeList(refreshToken: String)
+    case homeList(authorization: String)
 }
 
 
@@ -38,8 +38,8 @@ extension JobServices: TargetType {
     
     var headers: [String : String]? {
         switch self {
-        case .homeList(let refreshToken):
-            return["Content-Type" :"application/json", "refreshToken" : refreshToken]
+        case .homeList(let authorization):
+            return["Content-Type" :"application/json", "Authorization" : authorization]
         default:
             return["Content-Type" :"application/json"]
         }

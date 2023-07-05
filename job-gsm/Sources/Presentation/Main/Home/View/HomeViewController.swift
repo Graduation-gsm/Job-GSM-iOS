@@ -1,17 +1,15 @@
 import UIKit
 import SnapKit
 import Then
+import RxCocoa
+import RxSwift
 
 class HomeViewController: BaseViewController<HomeViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeListCollectionView.dataSource = self
-        homeListCollectionView.delegate = self
-        homeListCollectionView.register(
-            HomeListCell.self,
-            forCellWithReuseIdentifier: HomeListCell.identifier
-        )
+        homeListCollectionView.collectionViewLayout = layout
+        getData()
     }
     
     private let homeLogo = JGHomeLogo()
@@ -25,10 +23,23 @@ class HomeViewController: BaseViewController<HomeViewModel> {
         $0.layer.cornerRadius = 8
     }
     
+    private let layout = UICollectionViewFlowLayout().then {
+        $0.itemSize = CGSize(
+            width: (
+                156
+            ),
+            height: (
+                148
+            )
+        )
+        $0.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) //아이템 상하좌우 사이값 초기화
+    }
+    
     private let homeListCollectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: UICollectionViewFlowLayout()
     ).then {
+        $0.register(HomeListCell.self, forCellWithReuseIdentifier: "HomeListCell")
         $0.isScrollEnabled = true
     }
 
@@ -36,6 +47,35 @@ class HomeViewController: BaseViewController<HomeViewModel> {
         [homeLogo, filterButton, homeListCollectionView].forEach {
             view.addSubview($0)
         }
+    }
+    
+    func getData() {
+        // MARK: Input
+        let viewWillApeearObservable = self.rx.methodInvoked(#selector(viewWillAppear))
+            .map { _ in }
+            .asObservable()
+        
+        let companySelectedObservable = homeListCollectionView.rx.modelSelected(HomeListResponse.self)
+            .asObservable()
+            .map(\.idx)
+        
+        // MARK: Output
+        let output = viewModel.transform(
+            input: .init(
+                viewWillAppear: viewWillApeearObservable,
+                companyCellDidselect: companySelectedObservable
+            )
+        )
+        
+        output.list
+            .bind(
+                to: homeListCollectionView.rx.items(cellIdentifier: "HomeListCell", cellType: HomeListCell.self)
+            ) { ip, item, cell in
+                cell.companyImage.image = UIImage(named: "DummyImage.svg")
+                cell.companyName.text = item.companyName
+                cell.companyLocation.text = item.address
+            }
+            .disposed(by: disposeBag)
     }
     
     override func setLayout() {
@@ -52,42 +92,43 @@ class HomeViewController: BaseViewController<HomeViewModel> {
         homeListCollectionView.snp.makeConstraints {
             $0.top.equalTo(filterButton.snp.bottom).offset(24)
             $0.leading.trailing.equalToSuperview().inset(26)
-            $0.bottom.equalToSuperview().offset(0)
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
     }
 }
 
-extension HomeViewController:
-    UICollectionViewDelegate,
-    UICollectionViewDelegateFlowLayout,
-    UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 16
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeListCell.identifier, for: indexPath) as? HomeListCell else {
-            return UICollectionViewCell()
-        }
-        
-        cell.companyImage.image = UIImage(named: "DummyImage.svg")
-        cell.companyName.text = "(주) 온더룩"
-        cell.companyLocation.text = "서울시 강남구 어쩌구 저쩌구"
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(
-            width: (
-                156
-            ),
-            height: (
-                148
-            )
-        )
-    }
-}
-
+//extension HomeViewController:
+//    UICollectionViewDelegate,
+//    UICollectionViewDelegateFlowLayout,
+//    UICollectionViewDataSource {
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 16
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeListCell.identifier, for: indexPath) as? HomeListCell else {
+//            return UICollectionViewCell()
+//        }
+//
+//        cell.companyImage.image = UIImage(named: "DummyImage.svg")
+//        cell.companyName.text = "(주) 온더룩"
+//        cell.companyLocation.text = "서울시 강남구 어쩌구 저쩌구"
+//
+//        return cell
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(
+//            width: (
+//                156
+//            ),
+//            height: (
+//                148
+//            )
+//        )
+//    }
+//}
+//
