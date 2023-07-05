@@ -27,10 +27,10 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     private let layout = UICollectionViewFlowLayout().then {
         $0.itemSize = CGSize(
             width: (
-                156
+                147
             ),
             height: (
-                148
+                180
             )
         )
         $0.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) //아이템 상하좌우 사이값 초기화
@@ -70,6 +70,11 @@ class HomeViewController: BaseViewController<HomeViewModel> {
                 cell.companyImage.kf.setImage(with: url, placeholder: UIImage(named: "DummyImage.svg"))
                 cell.companyName.text = item.companyName
                 cell.companyLocation.text = item.address
+                cell.firstMajorLabel.text = item.major.first
+                if item.major.count > 1 {
+                    cell.secondMajorLabel.isHidden = false
+                    cell.secondMajorLabel.text = item.major.last
+                }
             }
             .disposed(by: disposeBag)
     }
