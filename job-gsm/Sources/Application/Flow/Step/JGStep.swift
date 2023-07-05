@@ -19,4 +19,7 @@ enum JGStep: Step {
     
     //MARK: TabBar
     case tabBarIsRequired
+    
+    //MARK: Detail
+    case detailIsRequired
 }
