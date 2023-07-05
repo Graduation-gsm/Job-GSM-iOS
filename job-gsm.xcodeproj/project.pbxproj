@@ -59,6 +59,8 @@
 		77C0339F2A54E7B7008E95D6 /* HomeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C0339E2A54E7B7008E95D6 /* HomeListModel.swift */; };
 		77C033A32A54E896008E95D6 /* JobServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033A22A54E896008E95D6 /* JobServices.swift */; };
 		77C033A62A550676008E95D6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 77C033A52A550676008E95D6 /* Kingfisher */; };
+		77C033AE2A550815008E95D6 /* DetailTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033AD2A550815008E95D6 /* DetailTitle.swift */; };
+		77C033B02A55081D008E95D6 /* DetailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033AF2A55081D008E95D6 /* DetailContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +112,8 @@
 		77C033852A52E014008E95D6 /* JGRefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGRefreshToken.swift; sourceTree = "<group>"; };
 		77C0339E2A54E7B7008E95D6 /* HomeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListModel.swift; sourceTree = "<group>"; };
 		77C033A22A54E896008E95D6 /* JobServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobServices.swift; sourceTree = "<group>"; };
+		77C033AD2A550815008E95D6 /* DetailTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitle.swift; sourceTree = "<group>"; };
+		77C033AF2A55081D008E95D6 /* DetailContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +358,7 @@
 		775BE4C92A4AFBDB00DD68CD /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				77C033AA2A5507DC008E95D6 /* DetailView */,
 				77C0335E2A4DC56E008E95D6 /* HomeLogo */,
 				775BE4D22A4C27FB00DD68CD /* Button */,
 				775BE4CA2A4AFBE800DD68CD /* TextField */,
@@ -380,6 +385,7 @@
 		77C0332D2A4C2F1A008E95D6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				77C033A72A550731008E95D6 /* Detail */,
 				77C0333F2A4C3102008E95D6 /* Profile */,
 				77C033382A4C30A5008E95D6 /* MOU */,
 				77C0332E2A4C2F38008E95D6 /* Home */,
@@ -631,6 +637,54 @@
 			path = Job;
 			sourceTree = "<group>";
 		};
+		77C033A72A550731008E95D6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				77C033A92A55073C008E95D6 /* ViewModel */,
+				77C033A82A550736008E95D6 /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		77C033A82A550736008E95D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77C033A92A55073C008E95D6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77C033AA2A5507DC008E95D6 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				77C033AB2A5507EB008E95D6 /* Title */,
+				77C033AC2A5507FA008E95D6 /* Content */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		77C033AB2A5507EB008E95D6 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				77C033AD2A550815008E95D6 /* DetailTitle.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		77C033AC2A5507FA008E95D6 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				77C033AF2A55081D008E95D6 /* DetailContent.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -723,6 +777,7 @@
 				77C033372A4C2FFA008E95D6 /* HomeViewModel.swift in Sources */,
 				775BE4C12A49DB0F00DD68CD /* Bundle.swift in Sources */,
 				77C033602A4DC581008E95D6 /* JGHomeLogo.swift in Sources */,
+				77C033AE2A550815008E95D6 /* DetailTitle.swift in Sources */,
 				775BE4C82A4AFAE500DD68CD /* InsertInfoViewController.swift in Sources */,
 				77C033A32A54E896008E95D6 /* JobServices.swift in Sources */,
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
@@ -749,6 +804,7 @@
 				77C0334A2A4C4856008E95D6 /* TabBarFlow.swift in Sources */,
 				77C033462A4C313A008E95D6 /* ProfileViewModel.swift in Sources */,
 				775BE4BC2A49A7B500DD68CD /* UIFont.swift in Sources */,
+				77C033B02A55081D008E95D6 /* DetailContent.swift in Sources */,
 				77C0333C2A4C30BF008E95D6 /* MOUViewController.swift in Sources */,
 				775BE4A82A49A19A00DD68CD /* OnBoardingViewController.swift in Sources */,
 				775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */,
