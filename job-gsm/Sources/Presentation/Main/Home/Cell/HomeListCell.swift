@@ -33,8 +33,29 @@ class HomeListCell: UICollectionViewCell {
         $0.textColor = UIColor.g20
     }
     
+    var firstMajorLabel = UILabel().then {
+        $0.backgroundColor = .white
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.g20?.cgColor
+        $0.layer.cornerRadius = 5
+        $0.textColor = .b10
+        $0.textAlignment = .center
+        $0.font = UIFont.JGFont(size: 12, family: .Regular)
+    }
+    
+    var secondMajorLabel = UILabel().then {
+        $0.isHidden = true
+        $0.backgroundColor = .white
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.g20?.cgColor
+        $0.layer.cornerRadius = 5
+        $0.textColor = .b10
+        $0.textAlignment = .center
+        $0.font = UIFont.JGFont(size: 12, family: .Regular)
+    }
+    
     private func addView() {
-        [companyImage, companyName, companyLocation].forEach {
+        [companyImage, companyName, companyLocation, firstMajorLabel, secondMajorLabel].forEach {
             contentView.addSubview($0)
         }
     }
@@ -53,6 +74,18 @@ class HomeListCell: UICollectionViewCell {
         companyLocation.snp.makeConstraints {
             $0.top.equalTo(companyName.snp.bottom).offset(4)
             $0.leading.equalToSuperview().offset(0)
+        }
+        firstMajorLabel.snp.makeConstraints {
+            $0.top.equalTo(companyLocation.snp.bottom).offset(6)
+            $0.leading.equalToSuperview().offset(0)
+            $0.width.equalTo(60)
+            $0.height.equalTo(26)
+        }
+        secondMajorLabel.snp.makeConstraints {
+            $0.top.equalTo(companyLocation.snp.bottom).offset(6)
+            $0.leading.equalTo(firstMajorLabel.snp.trailing).offset(6)
+            $0.width.equalTo(60)
+            $0.height.equalTo(26)
         }
     }
 }
