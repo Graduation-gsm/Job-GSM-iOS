@@ -44,6 +44,9 @@ class HomeFlow: Flow {
 
         case .profileIsRequired:
             return .one(flowContributor: .forwardToParentFlow(withStep: JGStep.profileIsRequired))
+            
+        case .detailIsRequired:
+            return coordinateToDetail()
 
         default:
             return .none
@@ -53,6 +56,13 @@ class HomeFlow: Flow {
     private func coordinateToHome() -> FlowContributors {
         let vm = HomeViewModel()
         let vc = HomeViewController(vm)
+        self.rootViewController.pushViewController(vc, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vm))
+    }
+    
+    private func coordinateToDetail() -> FlowContributors {
+        let vm = DetailViewModel()
+        let vc = DetailViewController(vm)
         self.rootViewController.pushViewController(vc, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vm))
     }
