@@ -50,7 +50,7 @@ class DetailViewController: BaseViewController<DetailViewModel> {
     
     override func setLayout() {
         companyImage.snp.makeConstraints {
-            $0.top.equalTo(view.snp.top).offset(0)
+            $0.top.equalTo(detailScrollView.snp.top).offset(0)
             $0.trailing.leading.equalToSuperview().inset(0)
             $0.height.equalTo(243)
         }
