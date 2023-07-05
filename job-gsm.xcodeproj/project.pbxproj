@@ -65,7 +65,6 @@
 		77C033B42A5509CB008E95D6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B32A5509CB008E95D6 /* DetailViewController.swift */; };
 		77C033B72A552DE8008E95D6 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B62A552DE8008E95D6 /* DetailCell.swift */; };
 		77C033BA2A556CD3008E95D6 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B92A556CD3008E95D6 /* DetailModel.swift */; };
-		77C033BD2A556F2F008E95D6 /* MajorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033BC2A556F2F008E95D6 /* MajorLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,7 +122,6 @@
 		77C033B32A5509CB008E95D6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		77C033B62A552DE8008E95D6 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		77C033B92A556CD3008E95D6 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
-		77C033BC2A556F2F008E95D6 /* MajorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,7 +366,6 @@
 		775BE4C92A4AFBDB00DD68CD /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				77C033BB2A556F15008E95D6 /* MajorLabel */,
 				77C033AA2A5507DC008E95D6 /* DetailView */,
 				77C0335E2A4DC56E008E95D6 /* HomeLogo */,
 				775BE4D22A4C27FB00DD68CD /* Button */,
@@ -716,14 +713,6 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		77C033BB2A556F15008E95D6 /* MajorLabel */ = {
-			isa = PBXGroup;
-			children = (
-				77C033BC2A556F2F008E95D6 /* MajorLabel.swift */,
-			);
-			path = MajorLabel;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -817,7 +806,6 @@
 				775BE4C12A49DB0F00DD68CD /* Bundle.swift in Sources */,
 				77C033602A4DC581008E95D6 /* JGHomeLogo.swift in Sources */,
 				77C033AE2A550815008E95D6 /* DetailTitle.swift in Sources */,
-				77C033BD2A556F2F008E95D6 /* MajorLabel.swift in Sources */,
 				775BE4C82A4AFAE500DD68CD /* InsertInfoViewController.swift in Sources */,
 				77C033A32A54E896008E95D6 /* JobServices.swift in Sources */,
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
