@@ -33,14 +33,8 @@ class HomeListCell: UICollectionViewCell {
         $0.textColor = UIColor.g20
     }
     
-    var bookMarkButton = UIButton().then {
-        $0.setImage(UIImage(named: "BookMarkIcon.svg"), for: .normal)
-        $0.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
-        $0.layer.cornerRadius = 12
-    }
-    
     private func addView() {
-        [companyImage, companyName, companyLocation, bookMarkButton].forEach {
+        [companyImage, companyName, companyLocation].forEach {
             contentView.addSubview($0)
         }
     }
@@ -59,11 +53,6 @@ class HomeListCell: UICollectionViewCell {
         companyLocation.snp.makeConstraints {
             $0.top.equalTo(companyName.snp.bottom).offset(4)
             $0.leading.equalToSuperview().offset(0)
-        }
-        bookMarkButton.snp.makeConstraints {
-            $0.top.equalTo(companyImage.snp.top).offset(8)
-            $0.trailing.equalTo(companyImage.snp.trailing).inset(8)
-            $0.width.height.equalTo(24)
         }
     }
 }
