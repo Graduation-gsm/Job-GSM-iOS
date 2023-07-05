@@ -3,21 +3,26 @@ import SnapKit
 import Then
 
 class DetailViewController: BaseViewController<DetailViewModel> {
-    private let cellName = ["회사 소개","주요 업무","자격요건","우대사항","채용절차", "병역특례 여부", "인사 담당자 정보"]
-    private let cellDetail = ["온더룩은 패션 IT 회사입니다.","NodeJs 기반의 GraphQL 서버 운영 및 고도화","React-Native를 사용한 마켓 출시 경험이 있으신 분웹 서비스 개발부터 배포까지의 경험을 가지신 분테스트 작성/테스트 자동화 경험이 있으신 분웹사이트 성능 측정 및 최적화 경험이 있으신 분개발에 대한 열정을 갖고, 지속적이고 효과적으로 피드백을 주고 받는 분","React-Native를 사용한 마켓 출시 경험이 있으신 분웹 서비스 개발부터 배포까지의 경험을 가지신 분테스트 작성/테스트 자동화 경험이 있으신 분웹사이트 성능 측정 및 최적화 경험이 있으신 분개발에 대한 열정을 갖고, 지속적이고 효과적으로 피드백을 주고 받는 분", "서류검토 - 1차면접 - 2차면접(필요 시) - 최종합격", "병역특례 가입 예정", "직책 : 책임/n성명 : 오진석\n전화번호 : 01012341234"]
     
     override func viewDidLoad() {
-        addScrollView()
         super.viewDidLoad()
+        view.addSubview(detailScrollView)
+        addScrollView()
     }
     
     private let detailScrollView = UIScrollView().then {
         $0.backgroundColor = .white
         $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.showsVerticalScrollIndicator = false
+    }
+    
+    private let backGroundView = UIView().then {
+        $0.backgroundColor = .white
+        $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
     private let companyImage = UIImageView().then {
-        $0.image = UIImage(named: "DummyImage.svg")
+        $0.image = UIImage(named: "dummy.svg")
     }
     
     private let companyTitle = UILabel().then {
@@ -32,25 +37,57 @@ class DetailViewController: BaseViewController<DetailViewModel> {
         $0.font = UIFont.JGFont(size: 12, family: .Regular)
     }
     
-    private let detailTableView = UITableView().then {
-        $0.register(DetailCell.self, forCellReuseIdentifier: "DetailCell")
-        $0.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        $0.isScrollEnabled = false
-    }
+    private let descriptionTitle = DetailTitle(text: "회사 소개")
+    
+    private let descriptionContent = DetailContent(text: "온더룩은 패션 IT 회사입니다.")
+    
+    private let businessTitle = DetailTitle(text: "주요 업무")
+    
+    private let businessContent = DetailContent(text: "NodeJs 기반의 GraphQL 서버 운영 및 고도화")
+    
+    private let qualificationTitle = DetailTitle(text: "자격요건")
+    
+    private let qualificationContent = DetailContent(text: "React-Native를 사용한 마켓 출시 경험이 있으신 분\n웹 서비스 개발부터 배포까지의 경험을 가지신 분\n테스트 작성/테스트 자동화 경험이 있으신 분\n웹사이트 성능 측정 및 최적화 경험이 있으신 분\n개발에 대한 열정을 갖고, 지속적이고 효과적으로 피드백을 주고 받는 분")
+    
+    private let preferentialTitle = DetailTitle(text: "우대사항")
+    
+    private let preferentialContent = DetailContent(text: "React-Native를 사용한 마켓 출시 경험이 있으신 분\n웹 서비스 개발부터 배포까지의 경험을 가지신 분\n테스트 작성/테스트 자동화 경험이 있으신 분\n웹사이트 성능 측정 및 최적화 경험이 있으신 분\n개발에 대한 열정을 갖고, 지속적이고 효과적으로 피드백을 주고 받는 분")
+    
+    private let procedureTitle = DetailTitle(text: "채용 절차")
+    
+    private let procedureContent = DetailContent(text: "서류검토 - 1차면접 - 2차면접(필요 시) - 최종합격")
+    
+    private let militaryServiceTitle = DetailTitle(text: "병역특례 여부")
+    
+    private let militaryServiceContent = DetailContent(text: "병역특례 가입 예정")
+    
+    private let humanResourcesInfoTitle = DetailTitle(text: "인사 담당자 정보")
+    
+    private let humanResourcesInfoContent = DetailContent(text: "직책 : 책임\n 성명 : 오진석\n 전화번호 : 01012341234")
     
     private func addScrollView() {
-        view.addSubview(detailTableView)
+        detailScrollView.snp.makeConstraints {
+            $0.top.equalTo(view.snp.top).offset(0)
+            $0.bottom.equalTo(view.snp.bottom).offset(0)
+            $0.trailing.equalTo(view.snp.trailing).offset(0)
+            $0.leading.equalTo(view.snp.leading).offset(0)
+        }
     }
     
     override func addView() {
-        [companyImage, companyTitle, companyLocation, detailTableView].forEach {
+        [backGroundView,companyImage, companyTitle, companyLocation, descriptionTitle, descriptionContent, businessTitle, businessContent,qualificationTitle, qualificationContent,preferentialTitle, preferentialContent,militaryServiceTitle, militaryServiceContent, humanResourcesInfoTitle, humanResourcesInfoContent].forEach {
             detailScrollView.addSubview($0)
         }
     }
     
     override func setLayout() {
+        backGroundView.snp.makeConstraints {
+            $0.edges.equalTo(detailScrollView.contentLayoutGuide)
+            $0.width.equalTo(detailScrollView.frameLayoutGuide)
+            $0.height.equalTo(detailScrollView.frameLayoutGuide).offset(150)
+        }
         companyImage.snp.makeConstraints {
-            $0.top.equalTo(detailScrollView.snp.top).offset(0)
+            $0.top.equalTo(backGroundView.snp.top).offset(0)
             $0.trailing.leading.equalToSuperview().inset(0)
             $0.height.equalTo(243)
         }
@@ -62,29 +99,53 @@ class DetailViewController: BaseViewController<DetailViewModel> {
             $0.top.equalTo(companyTitle.snp.bottom).offset(6)
             $0.leading.equalToSuperview().offset(26)
         }
-        detailTableView.snp.makeConstraints {
+        descriptionTitle.snp.makeConstraints {
             $0.top.equalTo(companyLocation.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().inset(26)
-            $0.bottom.equalToSuperview().offset(0)
+            $0.leading.equalToSuperview().offset(26)
         }
-    }
-}
-
-extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellName.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = detailTableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as! DetailCell
-        cell.detailTitle.text = cellName[indexPath.row]
-        cell.detailContent.text = (cellDetail[indexPath.row])
-        cell.selectionStyle = .none
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 129
+        descriptionContent.snp.makeConstraints {
+            $0.top.equalTo(descriptionTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        businessTitle.snp.makeConstraints {
+            $0.top.equalTo(descriptionContent.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(26)
+        }
+        businessContent.snp.makeConstraints {
+            $0.top.equalTo(businessTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        qualificationTitle.snp.makeConstraints {
+            $0.top.equalTo(businessContent.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(26)
+        }
+        qualificationContent.snp.makeConstraints {
+            $0.top.equalTo(qualificationTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        preferentialTitle.snp.makeConstraints {
+            $0.top.equalTo(qualificationContent.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(26)
+        }
+        preferentialContent.snp.makeConstraints {
+            $0.top.equalTo(preferentialTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        militaryServiceTitle.snp.makeConstraints {
+            $0.top.equalTo(preferentialContent.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(26)
+        }
+        militaryServiceContent.snp.makeConstraints {
+            $0.top.equalTo(militaryServiceTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        humanResourcesInfoTitle.snp.makeConstraints {
+            $0.top.equalTo(militaryServiceContent.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(26)
+        }
+        humanResourcesInfoContent.snp.makeConstraints {
+            $0.top.equalTo(humanResourcesInfoTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
     }
 }
