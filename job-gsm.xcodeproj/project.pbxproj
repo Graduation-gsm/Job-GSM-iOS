@@ -62,6 +62,7 @@
 		77C033AE2A550815008E95D6 /* DetailTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033AD2A550815008E95D6 /* DetailTitle.swift */; };
 		77C033B02A55081D008E95D6 /* DetailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033AF2A55081D008E95D6 /* DetailContent.swift */; };
 		77C033B22A550956008E95D6 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B12A550956008E95D6 /* DetailViewModel.swift */; };
+		77C033B42A5509CB008E95D6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B32A5509CB008E95D6 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		77C033AD2A550815008E95D6 /* DetailTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitle.swift; sourceTree = "<group>"; };
 		77C033AF2A55081D008E95D6 /* DetailContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContent.swift; sourceTree = "<group>"; };
 		77C033B12A550956008E95D6 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		77C033B32A5509CB008E95D6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -651,6 +653,7 @@
 		77C033A82A550736008E95D6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				77C033B32A5509CB008E95D6 /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				775BE4CC2A4AFC1100DD68CD /* JGTextField.swift in Sources */,
 				775BE4962A49867800DD68CD /* BaseViewController.swift in Sources */,
 				775BE49B2A49A05F00DD68CD /* OnBoardingViewModel.swift in Sources */,
+				77C033B42A5509CB008E95D6 /* DetailViewController.swift in Sources */,
 				77C0334A2A4C4856008E95D6 /* TabBarFlow.swift in Sources */,
 				77C033462A4C313A008E95D6 /* ProfileViewModel.swift in Sources */,
 				775BE4BC2A49A7B500DD68CD /* UIFont.swift in Sources */,
