@@ -3,6 +3,7 @@ import Moya
 
 enum JobServices {
     case homeList(authorization: String)
+    case detail(authorization: String, idx: Int)
 }
 
 
@@ -15,12 +16,14 @@ extension JobServices: TargetType {
         switch self {
         case .homeList:
             return "/job/"
+        case let .detail(_,idx):
+            return "job/\(idx)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .homeList:
+        case .homeList, .detail:
             return .get
         }
     }
@@ -31,14 +34,14 @@ extension JobServices: TargetType {
     
     var task: Task {
         switch self {
-        case .homeList:
+        case .homeList, .detail:
             return .requestPlain
         }
     }
     
     var headers: [String : String]? {
         switch self {
-        case .homeList(let authorization):
+        case .homeList(let authorization), .detail(let authorization, _):
             return["Content-Type" :"application/json", "Authorization" : authorization]
         default:
             return["Content-Type" :"application/json"]
