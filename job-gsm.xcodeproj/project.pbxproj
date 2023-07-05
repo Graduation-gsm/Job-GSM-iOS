@@ -61,6 +61,7 @@
 		77C033A62A550676008E95D6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 77C033A52A550676008E95D6 /* Kingfisher */; };
 		77C033AE2A550815008E95D6 /* DetailTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033AD2A550815008E95D6 /* DetailTitle.swift */; };
 		77C033B02A55081D008E95D6 /* DetailContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033AF2A55081D008E95D6 /* DetailContent.swift */; };
+		77C033B22A550956008E95D6 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B12A550956008E95D6 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		77C033A22A54E896008E95D6 /* JobServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobServices.swift; sourceTree = "<group>"; };
 		77C033AD2A550815008E95D6 /* DetailTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitle.swift; sourceTree = "<group>"; };
 		77C033AF2A55081D008E95D6 /* DetailContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContent.swift; sourceTree = "<group>"; };
+		77C033B12A550956008E95D6 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -656,6 +658,7 @@
 		77C033A92A55073C008E95D6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				77C033B12A550956008E95D6 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				77C033462A4C313A008E95D6 /* ProfileViewModel.swift in Sources */,
 				775BE4BC2A49A7B500DD68CD /* UIFont.swift in Sources */,
 				77C033B02A55081D008E95D6 /* DetailContent.swift in Sources */,
+				77C033B22A550956008E95D6 /* DetailViewModel.swift in Sources */,
 				77C0333C2A4C30BF008E95D6 /* MOUViewController.swift in Sources */,
 				775BE4A82A49A19A00DD68CD /* OnBoardingViewController.swift in Sources */,
 				775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */,
