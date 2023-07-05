@@ -12,6 +12,11 @@ import RxSwift
 import Moya
 
 class DetailViewModel: BaseViewModel, Stepper{
+    var idx: Int
+    
+    init(idx: Int) {
+        self.idx = idx
+    }
     
     struct Input {
         

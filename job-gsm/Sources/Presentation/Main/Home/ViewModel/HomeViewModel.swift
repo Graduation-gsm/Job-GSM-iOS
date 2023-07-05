@@ -54,7 +54,7 @@ class HomeViewModel: BaseViewModel, Stepper{
         
         input.companyCellDidselect
             .bind(with: self) { owner, idx in
-//                Navigation step.accept()
+                self.steps.accept(JGStep.detailIsRequired(idx: idx))
                 print(idx)
             }
             .disposed(by: disposeBag)

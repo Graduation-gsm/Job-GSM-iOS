@@ -21,5 +21,5 @@ enum JGStep: Step {
     case tabBarIsRequired
     
     //MARK: Detail
-    case detailIsRequired
+    case detailIsRequired(idx: Int)
 }
