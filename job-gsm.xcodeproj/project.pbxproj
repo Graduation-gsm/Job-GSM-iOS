@@ -64,6 +64,7 @@
 		77C033B22A550956008E95D6 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B12A550956008E95D6 /* DetailViewModel.swift */; };
 		77C033B42A5509CB008E95D6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B32A5509CB008E95D6 /* DetailViewController.swift */; };
 		77C033B72A552DE8008E95D6 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B62A552DE8008E95D6 /* DetailCell.swift */; };
+		77C033BA2A556CD3008E95D6 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B92A556CD3008E95D6 /* DetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		77C033B12A550956008E95D6 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		77C033B32A5509CB008E95D6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		77C033B62A552DE8008E95D6 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		77C033B92A556CD3008E95D6 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -622,6 +624,7 @@
 		77C0339C2A54E787008E95D6 /* Job */ = {
 			isa = PBXGroup;
 			children = (
+				77C033B82A556CC4008E95D6 /* Detail */,
 				77C0339D2A54E7A6008E95D6 /* HomeList */,
 			);
 			path = Job;
@@ -700,6 +703,14 @@
 				77C033B62A552DE8008E95D6 /* DetailCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		77C033B82A556CC4008E95D6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				77C033B92A556CD3008E95D6 /* DetailModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -814,6 +825,7 @@
 				77C0333E2A4C30D1008E95D6 /* MOUViewModel.swift in Sources */,
 				77C033532A4C4B01008E95D6 /* ProfileFlow.swift in Sources */,
 				77C0339F2A54E7B7008E95D6 /* HomeListModel.swift in Sources */,
+				77C033BA2A556CD3008E95D6 /* DetailModel.swift in Sources */,
 				775BE4D12A4C205F00DD68CD /* TextField.swift in Sources */,
 				775BE4CC2A4AFC1100DD68CD /* JGTextField.swift in Sources */,
 				775BE4962A49867800DD68CD /* BaseViewController.swift in Sources */,
