@@ -9,6 +9,9 @@ class DetailViewController: BaseViewController<DetailViewModel> {
         super.viewDidLoad()
         view.addSubview(detailScrollView)
         addScrollView()
+        majorCollectionView.dataSource = self
+        majorCollectionView.delegate = self
+        majorCollectionView.collectionViewLayout = layout
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -43,6 +46,30 @@ class DetailViewController: BaseViewController<DetailViewModel> {
         $0.text = "서울 강남구 어쩌구 저쩌구"
         $0.textColor = .g20
         $0.font = UIFont.JGFont(size: 12, family: .Regular)
+    }
+    
+    private let layout = UICollectionViewFlowLayout().then {
+        $0.itemSize = CGSize(
+            width: (
+                60
+            ),
+            height: (
+                26
+            )
+        )
+        $0.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 6) //아이템 상하좌우 사이값 초기화
+    }
+    
+    private let majorCollectionView = UICollectionView(
+        frame: .zero,
+        collectionViewLayout: UICollectionViewFlowLayout()
+    ).then {
+        $0.isScrollEnabled = false
+        $0.backgroundColor = .white
+        $0.register(
+            DetailCell.self,
+            forCellWithReuseIdentifier: DetailCell.identifier
+        )
     }
     
     private let descriptionTitle = DetailTitle(text: "회사 소개")
@@ -95,7 +122,7 @@ class DetailViewController: BaseViewController<DetailViewModel> {
     }
     
     override func addView() {
-        [companyImage, companyTitle, companyLocation, descriptionTitle, descriptionContent, businessTitle, businessContent,qualificationTitle, qualificationContent,preferentialTitle, preferentialContent,militaryServiceTitle, militaryServiceContent, humanResourcesInfoTitle, humanResourcesInfoContent,homePageTitle, homePageContent].forEach {
+        [companyImage, companyTitle, companyLocation,descriptionTitle, descriptionContent, businessTitle, businessContent,qualificationTitle, qualificationContent,preferentialTitle, preferentialContent,militaryServiceTitle, militaryServiceContent, humanResourcesInfoTitle, humanResourcesInfoContent,homePageTitle, homePageContent].forEach {
             backGroundView.addArrangedSubview($0)
         }
     }
@@ -115,7 +142,7 @@ class DetailViewController: BaseViewController<DetailViewModel> {
             $0.leading.equalToSuperview().offset(26)
         }
         descriptionTitle.snp.makeConstraints {
-            $0.top.equalTo(companyLocation.snp.bottom).offset(20)
+            $0.top.equalTo(companyLocation.snp.bottom).offset(54)
             $0.leading.equalToSuperview().offset(26)
         }
         descriptionContent.snp.makeConstraints {
@@ -191,5 +218,28 @@ extension UIScrollView {
         
         // 최종 계산 영역의 크기를 반환
         return totalRect.union(view.frame)
+    }
+}
+
+extension DetailViewController :
+    UICollectionViewDelegate,
+    UICollectionViewDelegateFlowLayout,
+    UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailCell.identifier, for: indexPath) as? DetailCell else {
+            return UICollectionViewCell()
+        }
+        cell.majorLabel.text = "iOS"
+
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: ((bounds.width) / 3.87), height: ((bounds.height) / 6.76))
     }
 }
