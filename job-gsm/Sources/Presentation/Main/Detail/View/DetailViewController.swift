@@ -126,6 +126,19 @@ class DetailViewController: BaseViewController<DetailViewModel> {
     
     private let welfare = FourCustomView()
     
+    private let etcInfoTitle = DetailTitle(text: "기타 정보")
+    
+    private let ectInfo = SingleCustomView().then {
+        $0.firstIcon.image = UIImage(named: "phone.svg")
+        $0.secondIcon.image = UIImage(named: "employmentCount.svg")
+        $0.firstLabel.text = "0101231234"
+        $0.secondLabel.text = "대표 이사 : 이범석"
+        $0.firstSubLabel.isHidden = true
+        $0.secondSubLabel.isHidden = true
+    }
+    
+    private let applyButton = JGButton(title: "지원하기")
+    
     private func addScrollView() {
         detailScrollView.snp.makeConstraints {
             $0.top.equalTo(view.snp.top).offset(0)
@@ -144,7 +157,7 @@ class DetailViewController: BaseViewController<DetailViewModel> {
     }
     
     override func addView() {
-        [companyImage, companyTitle, companyLocation,majorLabel,descriptionTitle, descriptionContent, businessTitle, businessContent,qualificationTitle, qualificationContent,preferentialTitle, preferentialContent,militaryServiceTitle, militaryServiceContent, humanResourcesInfoTitle, humanResourcesInfoContent,homePageTitle, homePageContent, detailLinkTitle,detailLinkContent,hireInfoTitle,hireInfo, employmentTitle, employment, companySizeTitle, companySize, moneyTitle, money,welfareTitle,welfare].forEach {
+        [companyImage, companyTitle, companyLocation,majorLabel,descriptionTitle, descriptionContent, businessTitle, businessContent,qualificationTitle, qualificationContent,preferentialTitle, preferentialContent,militaryServiceTitle, militaryServiceContent, humanResourcesInfoTitle, humanResourcesInfoContent,homePageTitle, homePageContent, detailLinkTitle,detailLinkContent,hireInfoTitle,hireInfo, employmentTitle, employment, companySizeTitle, companySize, moneyTitle, money,welfareTitle,welfare, etcInfoTitle,ectInfo,applyButton].forEach {
             backGroundView.addArrangedSubview($0)
         }
     }
@@ -276,6 +289,21 @@ class DetailViewController: BaseViewController<DetailViewModel> {
             $0.top.equalTo(welfareTitle.snp.bottom).offset(6)
             $0.leading.trailing.equalToSuperview().inset(26)
             $0.height.equalTo(186)
+        }
+        etcInfoTitle.snp.makeConstraints {
+            $0.top.equalTo(welfare.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        ectInfo.snp.makeConstraints {
+            $0.top.equalTo(etcInfoTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+            $0.height.equalTo(100)
+        }
+        applyButton.snp.makeConstraints {
+            $0.top.equalTo(ectInfo.snp.bottom).offset(60)
+            $0.centerX.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(26)
+            $0.height.equalTo(56)
         }
     }
 }
