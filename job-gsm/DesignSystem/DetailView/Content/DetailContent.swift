@@ -16,5 +16,6 @@ public final class DetailContent: UILabel {
         self.text = text
         self.textColor = .b10
         self.font = UIFont.JGFont(size: 14, family: .Regular)
+        self.numberOfLines = 10
     }
 }
