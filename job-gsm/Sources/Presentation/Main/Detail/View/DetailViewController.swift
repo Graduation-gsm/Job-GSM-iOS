@@ -91,6 +91,41 @@ class DetailViewController: BaseViewController<DetailViewModel> {
     
     private let employmentTitle = DetailTitle(text: "사원 수")
     
+    private let employment = SingleCustomView().then {
+        $0.firstIcon.image = UIImage(named: "totalEmployment.svg")
+        $0.secondIcon.image = UIImage(named: "swEmployment.svg")
+        $0.firstLabel.text = "총 10명"
+        $0.secondLabel.text = "SW 직무 3명"
+        $0.firstSubLabel.isHidden = true
+        $0.secondSubLabel.isHidden = true
+    }
+    
+    private let companySizeTitle = DetailTitle(text: "회사 규모")
+    
+    private let companySize = SingleCustomView().then {
+        $0.firstIcon.image = UIImage(named: "capital.svg")
+        $0.secondIcon.image = UIImage(named: "annualSales.svg")
+        $0.firstLabel.text = "170,000,000원"
+        $0.secondLabel.text = "1,230,000,000원"
+        $0.firstSubLabel.text = "자본금"
+        $0.secondSubLabel.text = "연간매출"
+    }
+    
+    private let moneyTitle = DetailTitle(text: "급여조건")
+    
+    private let money = SingleCustomView().then {
+        $0.firstIcon.image = UIImage(named: "capital.svg")
+        $0.secondIcon.image = UIImage(named: "annualSales.svg")
+        $0.firstLabel.text = "170,000,000원"
+        $0.secondLabel.text = "1,230,000,000원"
+        $0.firstSubLabel.text = "현장실습 + 수습기간 3개월"
+        $0.secondSubLabel.text = "정사원 채용 후"
+    }
+    
+    private let welfareTitle = DetailTitle(text: "후생 조건")
+    
+    private let welfare = FourCustomView()
+    
     private func addScrollView() {
         detailScrollView.snp.makeConstraints {
             $0.top.equalTo(view.snp.top).offset(0)
@@ -109,7 +144,7 @@ class DetailViewController: BaseViewController<DetailViewModel> {
     }
     
     override func addView() {
-        [companyImage, companyTitle, companyLocation,majorLabel,descriptionTitle, descriptionContent, businessTitle, businessContent,qualificationTitle, qualificationContent,preferentialTitle, preferentialContent,militaryServiceTitle, militaryServiceContent, humanResourcesInfoTitle, humanResourcesInfoContent,homePageTitle, homePageContent, detailLinkTitle,detailLinkContent,hireInfoTitle,hireInfo, employmentTitle].forEach {
+        [companyImage, companyTitle, companyLocation,majorLabel,descriptionTitle, descriptionContent, businessTitle, businessContent,qualificationTitle, qualificationContent,preferentialTitle, preferentialContent,militaryServiceTitle, militaryServiceContent, humanResourcesInfoTitle, humanResourcesInfoContent,homePageTitle, homePageContent, detailLinkTitle,detailLinkContent,hireInfoTitle,hireInfo, employmentTitle, employment, companySizeTitle, companySize, moneyTitle, money,welfareTitle,welfare].forEach {
             backGroundView.addArrangedSubview($0)
         }
     }
@@ -209,6 +244,38 @@ class DetailViewController: BaseViewController<DetailViewModel> {
         employmentTitle.snp.makeConstraints {
             $0.top.equalTo(hireInfo.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        employment.snp.makeConstraints {
+            $0.top.equalTo(employmentTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+            $0.height.equalTo(100)
+        }
+        companySizeTitle.snp.makeConstraints {
+            $0.top.equalTo(employment.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        companySize.snp.makeConstraints {
+            $0.top.equalTo(companySizeTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+            $0.height.equalTo(100)
+        }
+        moneyTitle.snp.makeConstraints {
+            $0.top.equalTo(companySize.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        money.snp.makeConstraints {
+            $0.top.equalTo(moneyTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+            $0.height.equalTo(100)
+        }
+        welfareTitle.snp.makeConstraints {
+            $0.top.equalTo(money.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        welfare.snp.makeConstraints {
+            $0.top.equalTo(welfareTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+            $0.height.equalTo(186)
         }
     }
 }

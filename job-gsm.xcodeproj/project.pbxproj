@@ -66,6 +66,7 @@
 		77C033BA2A556CD3008E95D6 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B92A556CD3008E95D6 /* DetailModel.swift */; };
 		77C033C02A564CEE008E95D6 /* MajorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033BF2A564CEE008E95D6 /* MajorLabel.swift */; };
 		77C033C32A565804008E95D6 /* SingleCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033C22A565804008E95D6 /* SingleCustomView.swift */; };
+		77C033C62A568509008E95D6 /* FourCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033C52A568509008E95D6 /* FourCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,7 @@
 		77C033B92A556CD3008E95D6 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		77C033BF2A564CEE008E95D6 /* MajorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorLabel.swift; sourceTree = "<group>"; };
 		77C033C22A565804008E95D6 /* SingleCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCustomView.swift; sourceTree = "<group>"; };
+		77C033C52A568509008E95D6 /* FourCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -676,6 +678,7 @@
 		77C033AA2A5507DC008E95D6 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				77C033C42A5684E9008E95D6 /* fourCustomView */,
 				77C033C12A5657ED008E95D6 /* SingleCustomView */,
 				77C033BE2A564CDD008E95D6 /* MajorLabel */,
 				77C033AB2A5507EB008E95D6 /* Title */,
@@ -722,6 +725,14 @@
 				77C033C22A565804008E95D6 /* SingleCustomView.swift */,
 			);
 			path = SingleCustomView;
+			sourceTree = "<group>";
+		};
+		77C033C42A5684E9008E95D6 /* fourCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				77C033C52A568509008E95D6 /* FourCustomView.swift */,
+			);
+			path = fourCustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -848,6 +859,7 @@
 				77C033462A4C313A008E95D6 /* ProfileViewModel.swift in Sources */,
 				775BE4BC2A49A7B500DD68CD /* UIFont.swift in Sources */,
 				77C033B02A55081D008E95D6 /* DetailContent.swift in Sources */,
+				77C033C62A568509008E95D6 /* FourCustomView.swift in Sources */,
 				77C033B22A550956008E95D6 /* DetailViewModel.swift in Sources */,
 				77C0333C2A4C30BF008E95D6 /* MOUViewController.swift in Sources */,
 				775BE4A82A49A19A00DD68CD /* OnBoardingViewController.swift in Sources */,
