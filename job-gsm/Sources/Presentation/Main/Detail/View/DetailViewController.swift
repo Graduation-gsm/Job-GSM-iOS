@@ -81,6 +81,16 @@ class DetailViewController: BaseViewController<DetailViewModel> {
     
     private let homePageContent = DetailContent(text: "https://www.youtube.com/watch?v=i-t8YpaslB4")
     
+    private let detailLinkTitle = DetailTitle(text: "별도 링크")
+    
+    private let detailLinkContent = DetailContent(text: "https://github.com/team-haribo/iOSpublishing-ain/blob/main/GOMS/Controller/LoginVC/LoginViewController.swift")
+    
+    private let hireInfoTitle = DetailTitle(text: "채용 정보")
+    
+    private let hireInfo = SingleCustomView()
+    
+    private let employmentTitle = DetailTitle(text: "사원 수")
+    
     private func addScrollView() {
         detailScrollView.snp.makeConstraints {
             $0.top.equalTo(view.snp.top).offset(0)
@@ -99,7 +109,7 @@ class DetailViewController: BaseViewController<DetailViewModel> {
     }
     
     override func addView() {
-        [companyImage, companyTitle, companyLocation,majorLabel,descriptionTitle, descriptionContent, businessTitle, businessContent,qualificationTitle, qualificationContent,preferentialTitle, preferentialContent,militaryServiceTitle, militaryServiceContent, humanResourcesInfoTitle, humanResourcesInfoContent,homePageTitle, homePageContent].forEach {
+        [companyImage, companyTitle, companyLocation,majorLabel,descriptionTitle, descriptionContent, businessTitle, businessContent,qualificationTitle, qualificationContent,preferentialTitle, preferentialContent,militaryServiceTitle, militaryServiceContent, humanResourcesInfoTitle, humanResourcesInfoContent,homePageTitle, homePageContent, detailLinkTitle,detailLinkContent,hireInfoTitle,hireInfo, employmentTitle].forEach {
             backGroundView.addArrangedSubview($0)
         }
     }
@@ -179,26 +189,26 @@ class DetailViewController: BaseViewController<DetailViewModel> {
             $0.top.equalTo(homePageTitle.snp.bottom).offset(6)
             $0.leading.trailing.equalToSuperview().inset(26)
         }
-    }
-}
-
-extension UIScrollView {
-    func updateContentSize() {
-        let unionCalculatedTotalRect = recursiveUnionInDepthFor(view: self)
-        
-        // 계산된 크기로 컨텐츠 사이즈 설정
-        self.contentSize = CGSize(width: self.frame.width, height: unionCalculatedTotalRect.height+50)
-    }
-    
-    private func recursiveUnionInDepthFor(view: UIView) -> CGRect {
-        var totalRect: CGRect = .zero
-        
-        // 모든 자식 View의 컨트롤의 크기를 재귀적으로 호출하며 최종 영역의 크기를 설정
-        for subView in view.subviews {
-            totalRect = totalRect.union(recursiveUnionInDepthFor(view: subView))
+        detailLinkTitle.snp.makeConstraints {
+            $0.top.equalTo(homePageContent.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(26)
         }
-        
-        // 최종 계산 영역의 크기를 반환
-        return totalRect.union(view.frame)
+        detailLinkContent.snp.makeConstraints {
+            $0.top.equalTo(detailLinkTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        hireInfoTitle.snp.makeConstraints {
+            $0.top.equalTo(detailLinkContent.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+        hireInfo.snp.makeConstraints {
+            $0.top.equalTo(hireInfoTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+            $0.height.equalTo(100)
+        }
+        employmentTitle.snp.makeConstraints {
+            $0.top.equalTo(hireInfo.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
     }
 }

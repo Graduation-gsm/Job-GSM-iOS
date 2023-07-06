@@ -65,6 +65,7 @@
 		77C033B42A5509CB008E95D6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B32A5509CB008E95D6 /* DetailViewController.swift */; };
 		77C033BA2A556CD3008E95D6 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033B92A556CD3008E95D6 /* DetailModel.swift */; };
 		77C033C02A564CEE008E95D6 /* MajorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033BF2A564CEE008E95D6 /* MajorLabel.swift */; };
+		77C033C32A565804008E95D6 /* SingleCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C033C22A565804008E95D6 /* SingleCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		77C033B32A5509CB008E95D6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		77C033B92A556CD3008E95D6 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		77C033BF2A564CEE008E95D6 /* MajorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorLabel.swift; sourceTree = "<group>"; };
+		77C033C22A565804008E95D6 /* SingleCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -674,6 +676,7 @@
 		77C033AA2A5507DC008E95D6 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				77C033C12A5657ED008E95D6 /* SingleCustomView */,
 				77C033BE2A564CDD008E95D6 /* MajorLabel */,
 				77C033AB2A5507EB008E95D6 /* Title */,
 				77C033AC2A5507FA008E95D6 /* Content */,
@@ -711,6 +714,14 @@
 				77C033BF2A564CEE008E95D6 /* MajorLabel.swift */,
 			);
 			path = MajorLabel;
+			sourceTree = "<group>";
+		};
+		77C033C12A5657ED008E95D6 /* SingleCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				77C033C22A565804008E95D6 /* SingleCustomView.swift */,
+			);
+			path = SingleCustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -811,6 +822,7 @@
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
 				77C033802A52DE02008E95D6 /* RefreshTokenModel.swift in Sources */,
 				775BE4D62A4C281B00DD68CD /* JGButton.swift in Sources */,
+				77C033C32A565804008E95D6 /* SingleCustomView.swift in Sources */,
 				77C033772A52BD2C008E95D6 /* SignInRequest.swift in Sources */,
 				775BE4BF2A49A85500DD68CD /* UIColor.swift in Sources */,
 				77C033442A4C312B008E95D6 /* ProfileViewController.swift in Sources */,
