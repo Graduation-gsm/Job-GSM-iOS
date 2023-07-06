@@ -5,9 +5,14 @@ import Then
 class DetailViewController: BaseViewController<DetailViewModel> {
     
     override func viewDidLoad() {
+        self.tabBarController?.tabBar.isHidden = true
         super.viewDidLoad()
         view.addSubview(detailScrollView)
         addScrollView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     private let detailScrollView = UIScrollView().then {
@@ -16,9 +21,12 @@ class DetailViewController: BaseViewController<DetailViewModel> {
         $0.showsVerticalScrollIndicator = false
     }
     
-    private let backGroundView = UIView().then {
-        $0.backgroundColor = .white
+    private let backGroundView = UIStackView().then {
+        $0.axis = .vertical
+        $0.distribution = .fill
+        $0.alignment = .fill
         $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.spacing = 20
     }
     
     private let companyImage = UIImageView().then {
@@ -65,6 +73,10 @@ class DetailViewController: BaseViewController<DetailViewModel> {
     
     private let humanResourcesInfoContent = DetailContent(text: "직책 : 책임\n 성명 : 오진석\n 전화번호 : 01012341234")
     
+    private let homePageTitle = DetailTitle(text: "홈페이지")
+    
+    private let homePageContent = DetailContent(text: "https://www.youtube.com/watch?v=i-t8YpaslB4")
+    
     private func addScrollView() {
         detailScrollView.snp.makeConstraints {
             $0.top.equalTo(view.snp.top).offset(0)
@@ -72,20 +84,23 @@ class DetailViewController: BaseViewController<DetailViewModel> {
             $0.trailing.equalTo(view.snp.trailing).offset(0)
             $0.leading.equalTo(view.snp.leading).offset(0)
         }
+        detailScrollView.addSubview(backGroundView)
+        backGroundView.snp.makeConstraints {
+            $0.top.equalTo(detailScrollView.snp.top).offset(0)
+            $0.bottom.equalTo(detailScrollView.snp.bottom).offset(0)
+            $0.trailing.equalTo(detailScrollView.snp.trailing).offset(0)
+            $0.leading.equalTo(detailScrollView.snp.leading).offset(0)
+            $0.width.equalTo(detailScrollView.snp.width).offset(0)
+        }
     }
     
     override func addView() {
-        [backGroundView,companyImage, companyTitle, companyLocation, descriptionTitle, descriptionContent, businessTitle, businessContent,qualificationTitle, qualificationContent,preferentialTitle, preferentialContent,militaryServiceTitle, militaryServiceContent, humanResourcesInfoTitle, humanResourcesInfoContent].forEach {
-            detailScrollView.addSubview($0)
+        [companyImage, companyTitle, companyLocation, descriptionTitle, descriptionContent, businessTitle, businessContent,qualificationTitle, qualificationContent,preferentialTitle, preferentialContent,militaryServiceTitle, militaryServiceContent, humanResourcesInfoTitle, humanResourcesInfoContent,homePageTitle, homePageContent].forEach {
+            backGroundView.addArrangedSubview($0)
         }
     }
     
     override func setLayout() {
-        backGroundView.snp.makeConstraints {
-            $0.edges.equalTo(detailScrollView.contentLayoutGuide)
-            $0.width.equalTo(detailScrollView.frameLayoutGuide)
-            $0.height.equalTo(detailScrollView.frameLayoutGuide).offset(150)
-        }
         companyImage.snp.makeConstraints {
             $0.top.equalTo(backGroundView.snp.top).offset(0)
             $0.trailing.leading.equalToSuperview().inset(0)
@@ -147,5 +162,34 @@ class DetailViewController: BaseViewController<DetailViewModel> {
             $0.top.equalTo(humanResourcesInfoTitle.snp.bottom).offset(6)
             $0.leading.trailing.equalToSuperview().inset(26)
         }
+        homePageTitle.snp.makeConstraints {
+            $0.top.equalTo(humanResourcesInfoContent.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(26)
+        }
+        homePageContent.snp.makeConstraints {
+            $0.top.equalTo(homePageTitle.snp.bottom).offset(6)
+            $0.leading.trailing.equalToSuperview().inset(26)
+        }
+    }
+}
+
+extension UIScrollView {
+    func updateContentSize() {
+        let unionCalculatedTotalRect = recursiveUnionInDepthFor(view: self)
+        
+        // 계산된 크기로 컨텐츠 사이즈 설정
+        self.contentSize = CGSize(width: self.frame.width, height: unionCalculatedTotalRect.height+50)
+    }
+    
+    private func recursiveUnionInDepthFor(view: UIView) -> CGRect {
+        var totalRect: CGRect = .zero
+        
+        // 모든 자식 View의 컨트롤의 크기를 재귀적으로 호출하며 최종 영역의 크기를 설정
+        for subView in view.subviews {
+            totalRect = totalRect.union(recursiveUnionInDepthFor(view: subView))
+        }
+        
+        // 최종 계산 영역의 크기를 반환
+        return totalRect.union(view.frame)
     }
 }
