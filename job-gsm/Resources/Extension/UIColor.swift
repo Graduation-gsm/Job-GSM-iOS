@@ -6,4 +6,5 @@ extension UIColor {
     static var b10 = UIColor(named: "B10")
     static var g10 = UIColor(named: "G10")
     static var g20 = UIColor(named: "G20")
+    static var g30 = UIColor(named: "G30")
 }
