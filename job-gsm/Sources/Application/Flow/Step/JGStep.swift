@@ -22,4 +22,7 @@ enum JGStep: Step {
     
     //MARK: Detail
     case detailIsRequired(idx: Int)
+    
+    //MARK: Filter
+    case filterIsRequired
 }
