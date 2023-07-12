@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771583FC2A5E40EA00DBD2D4 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771583FB2A5E40EA00DBD2D4 /* FilterViewController.swift */; };
+		771583FE2A5E40FE00DBD2D4 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771583FD2A5E40FE00DBD2D4 /* FilterViewModel.swift */; };
+		771584002A5E415900DBD2D4 /* MajorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771583FF2A5E415900DBD2D4 /* MajorCell.swift */; };
 		775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4752A490E1F00DD68CD /* AppDelegate.swift */; };
 		775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4772A490E1F00DD68CD /* SceneDelegate.swift */; };
 		775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4792A490E1F00DD68CD /* BaseViewModel.swift */; };
@@ -70,6 +73,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		771583FB2A5E40EA00DBD2D4 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		771583FD2A5E40FE00DBD2D4 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		771583FF2A5E415900DBD2D4 /* MajorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorCell.swift; sourceTree = "<group>"; };
 		775BE4722A490E1F00DD68CD /* job-gsm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "job-gsm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		775BE4752A490E1F00DD68CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		775BE4772A490E1F00DD68CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +151,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		771583F72A5E40B100DBD2D4 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				771583FA2A5E40C700DBD2D4 /* Cell */,
+				771583F92A5E40BF00DBD2D4 /* ViewModel */,
+				771583F82A5E40BB00DBD2D4 /* View */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		771583F82A5E40BB00DBD2D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				771583FB2A5E40EA00DBD2D4 /* FilterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		771583F92A5E40BF00DBD2D4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				771583FD2A5E40FE00DBD2D4 /* FilterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		771583FA2A5E40C700DBD2D4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				771583FF2A5E415900DBD2D4 /* MajorCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		775BE4692A490E1F00DD68CD = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +437,7 @@
 		77C0332D2A4C2F1A008E95D6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				771583F72A5E40B100DBD2D4 /* Filter */,
 				77C033A72A550731008E95D6 /* Detail */,
 				77C0333F2A4C3102008E95D6 /* Profile */,
 				77C033382A4C30A5008E95D6 /* MOU */,
@@ -858,6 +899,7 @@
 				77C0334A2A4C4856008E95D6 /* TabBarFlow.swift in Sources */,
 				77C033462A4C313A008E95D6 /* ProfileViewModel.swift in Sources */,
 				775BE4BC2A49A7B500DD68CD /* UIFont.swift in Sources */,
+				771583FE2A5E40FE00DBD2D4 /* FilterViewModel.swift in Sources */,
 				77C033B02A55081D008E95D6 /* DetailContent.swift in Sources */,
 				77C033C62A568509008E95D6 /* FourCustomView.swift in Sources */,
 				77C033B22A550956008E95D6 /* DetailViewModel.swift in Sources */,
@@ -866,8 +908,10 @@
 				775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */,
 				77C0334D2A4C4978008E95D6 /* JGTabBar.swift in Sources */,
 				77C033732A52BCB0008E95D6 /* SignInModel.swift in Sources */,
+				771584002A5E415900DBD2D4 /* MajorCell.swift in Sources */,
 				77C033632A4DC8E3008E95D6 /* HomeListCell.swift in Sources */,
 				775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */,
+				771583FC2A5E40EA00DBD2D4 /* FilterViewController.swift in Sources */,
 				77C033862A52E014008E95D6 /* JGRefreshToken.swift in Sources */,
 				775BE4C62A4AF99D00DD68CD /* InsertInfoViewModel.swift in Sources */,
 				775BE4B22A49A43F00DD68CD /* OnBoardingFlow.swift in Sources */,
