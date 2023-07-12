@@ -17,6 +17,7 @@ class HomeViewModel: BaseViewModel, Stepper{
     struct Input {
         var viewWillAppear: Observable<Void>
         var companyCellDidselect: Observable<Int>
+        var filterButtonDidTap: Observable<Void>
     }
     
     struct Output {
@@ -59,9 +60,18 @@ class HomeViewModel: BaseViewModel, Stepper{
             }
             .disposed(by: disposeBag)
         
+        input.filterButtonDidTap.subscribe(
+            onNext: pushFilter
+        ) .disposed(by: disposeBag)
+        
+        
         return Output(
             list: listRelay.asObservable()
         )
+    }
+    
+    func pushFilter() {
+        self.steps.accept(JGStep.filterIsRequired)
     }
 
 }

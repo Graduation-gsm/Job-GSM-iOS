@@ -54,11 +54,13 @@ class HomeViewController: BaseViewController<HomeViewModel> {
             .asObservable()
             .map(\.idx)
         
+        
         // MARK: Output
         let output = viewModel.transform(
             input: .init(
                 viewWillAppear: viewWillApeearObservable,
-                companyCellDidselect: companySelectedObservable
+                companyCellDidselect: companySelectedObservable,
+                filterButtonDidTap: filterButton.rx.tap.asObservable()
             )
         )
         
