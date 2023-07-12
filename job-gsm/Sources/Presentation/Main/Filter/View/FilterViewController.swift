@@ -13,7 +13,7 @@ class FilterViewController: BaseViewController<FilterViewModel> {
 
     override func viewDidLoad() {
         self.tabBarController?.tabBar.isHidden = true
-        self.navigationItem.title = "학생 정보 수정"
+        self.navigationItem.title = "기술 스택"
         super.viewDidLoad()
         majorCollectionView.dataSource = self
         majorCollectionView.delegate = self

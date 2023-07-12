@@ -47,6 +47,9 @@ class HomeFlow: Flow {
             
         case let .detailIsRequired(idx):
             return coordinateToDetail(idx: idx)
+            
+        case .filterIsRequired:
+            return coordinateToFilter()
 
         default:
             return .none
@@ -63,6 +66,13 @@ class HomeFlow: Flow {
     private func coordinateToDetail(idx: Int) -> FlowContributors {
         let vm = DetailViewModel(idx: idx)
         let vc = DetailViewController(vm)
+        self.rootViewController.pushViewController(vc, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vm))
+    }
+    
+    private func coordinateToFilter() -> FlowContributors {
+        let vm = FilterViewModel()
+        let vc = FilterViewController(vm)
         self.rootViewController.pushViewController(vc, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vm))
     }
