@@ -14,4 +14,15 @@ extension UITextField {
         leftView = iconContainerView
         leftViewMode = .always
     }
+        
+    func setPlaceholderColor(_ placeholderColor: UIColor) {
+        attributedPlaceholder = NSAttributedString(
+            string: placeholder ?? "",
+            attributes: [
+                .foregroundColor: placeholderColor,
+                .font: font
+            ].compactMapValues { $0 }
+        )
+    }
+    
 }

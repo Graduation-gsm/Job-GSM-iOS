@@ -13,6 +13,9 @@
 		771584032A5E770C00DBD2D4 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771584022A5E770C00DBD2D4 /* FilterModel.swift */; };
 		771584072A5FB84900DBD2D4 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771584062A5FB84900DBD2D4 /* ProfileModel.swift */; };
 		7715840A2A5FB8B100DBD2D4 /* AccountServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771584092A5FB8B100DBD2D4 /* AccountServices.swift */; };
+		7715840F2A600BCA00DBD2D4 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7715840E2A600BCA00DBD2D4 /* EditViewModel.swift */; };
+		771584112A600BDE00DBD2D4 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771584102A600BDE00DBD2D4 /* EditViewController.swift */; };
+		771584132A600D1900DBD2D4 /* EditTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771584122A600D1900DBD2D4 /* EditTextField.swift */; };
 		775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4752A490E1F00DD68CD /* AppDelegate.swift */; };
 		775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4772A490E1F00DD68CD /* SceneDelegate.swift */; };
 		775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4792A490E1F00DD68CD /* BaseViewModel.swift */; };
@@ -82,6 +85,9 @@
 		771584022A5E770C00DBD2D4 /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
 		771584062A5FB84900DBD2D4 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		771584092A5FB8B100DBD2D4 /* AccountServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServices.swift; sourceTree = "<group>"; };
+		7715840E2A600BCA00DBD2D4 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
+		771584102A600BDE00DBD2D4 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		771584122A600D1900DBD2D4 /* EditTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextField.swift; sourceTree = "<group>"; };
 		775BE4722A490E1F00DD68CD /* job-gsm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "job-gsm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		775BE4752A490E1F00DD68CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		775BE4772A490E1F00DD68CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +227,31 @@
 				771584092A5FB8B100DBD2D4 /* AccountServices.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		7715840B2A600B8800DBD2D4 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				7715840D2A600BA000DBD2D4 /* ViewModel */,
+				7715840C2A600B9B00DBD2D4 /* View */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		7715840C2A600B9B00DBD2D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				771584102A600BDE00DBD2D4 /* EditViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7715840D2A600BA000DBD2D4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7715840E2A600BCA00DBD2D4 /* EditViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		775BE4692A490E1F00DD68CD = {
@@ -460,6 +491,7 @@
 			isa = PBXGroup;
 			children = (
 				775BE4CB2A4AFC1100DD68CD /* JGTextField.swift */,
+				771584122A600D1900DBD2D4 /* EditTextField.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -475,6 +507,7 @@
 		77C0332D2A4C2F1A008E95D6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				7715840B2A600B8800DBD2D4 /* Edit */,
 				771583F72A5E40B100DBD2D4 /* Filter */,
 				77C033A72A550731008E95D6 /* Detail */,
 				77C0333F2A4C3102008E95D6 /* Profile */,
@@ -906,8 +939,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7715840F2A600BCA00DBD2D4 /* EditViewModel.swift in Sources */,
 				77C033372A4C2FFA008E95D6 /* HomeViewModel.swift in Sources */,
 				775BE4C12A49DB0F00DD68CD /* Bundle.swift in Sources */,
+				771584132A600D1900DBD2D4 /* EditTextField.swift in Sources */,
 				77C033602A4DC581008E95D6 /* JGHomeLogo.swift in Sources */,
 				77C033AE2A550815008E95D6 /* DetailTitle.swift in Sources */,
 				775BE4C82A4AFAE500DD68CD /* InsertInfoViewController.swift in Sources */,
@@ -928,6 +963,7 @@
 				775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */,
 				77C0334F2A4C4ADF008E95D6 /* HomeFlow.swift in Sources */,
 				77C033512A4C4AF5008E95D6 /* MOUFlow.swift in Sources */,
+				771584112A600BDE00DBD2D4 /* EditViewController.swift in Sources */,
 				77C033842A52DF78008E95D6 /* JGToken.swift in Sources */,
 				77C0337A2A52BD62008E95D6 /* AuthServices.swift in Sources */,
 				77C0333E2A4C30D1008E95D6 /* MOUViewModel.swift in Sources */,
