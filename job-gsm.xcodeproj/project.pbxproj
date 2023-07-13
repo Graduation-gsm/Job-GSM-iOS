@@ -11,6 +11,8 @@
 		771583FE2A5E40FE00DBD2D4 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771583FD2A5E40FE00DBD2D4 /* FilterViewModel.swift */; };
 		771584002A5E415900DBD2D4 /* MajorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771583FF2A5E415900DBD2D4 /* MajorCell.swift */; };
 		771584032A5E770C00DBD2D4 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771584022A5E770C00DBD2D4 /* FilterModel.swift */; };
+		771584072A5FB84900DBD2D4 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771584062A5FB84900DBD2D4 /* ProfileModel.swift */; };
+		7715840A2A5FB8B100DBD2D4 /* AccountServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771584092A5FB8B100DBD2D4 /* AccountServices.swift */; };
 		775BE4762A490E1F00DD68CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4752A490E1F00DD68CD /* AppDelegate.swift */; };
 		775BE4782A490E1F00DD68CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4772A490E1F00DD68CD /* SceneDelegate.swift */; };
 		775BE47A2A490E1F00DD68CD /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BE4792A490E1F00DD68CD /* BaseViewModel.swift */; };
@@ -78,6 +80,8 @@
 		771583FD2A5E40FE00DBD2D4 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		771583FF2A5E415900DBD2D4 /* MajorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorCell.swift; sourceTree = "<group>"; };
 		771584022A5E770C00DBD2D4 /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
+		771584062A5FB84900DBD2D4 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		771584092A5FB8B100DBD2D4 /* AccountServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServices.swift; sourceTree = "<group>"; };
 		775BE4722A490E1F00DD68CD /* job-gsm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "job-gsm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		775BE4752A490E1F00DD68CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		775BE4772A490E1F00DD68CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +197,30 @@
 				771584022A5E770C00DBD2D4 /* FilterModel.swift */,
 			);
 			path = Filtering;
+			sourceTree = "<group>";
+		};
+		771584042A5FB83300DBD2D4 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				771584052A5FB83B00DBD2D4 /* Profile */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		771584052A5FB83B00DBD2D4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				771584062A5FB84900DBD2D4 /* ProfileModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		771584082A5FB8A500DBD2D4 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				771584092A5FB8B100DBD2D4 /* AccountServices.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		775BE4692A490E1F00DD68CD = {
@@ -612,6 +640,7 @@
 		77C0336B2A52B83E008E95D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				771584042A5FB83300DBD2D4 /* Account */,
 				77C0339C2A54E787008E95D6 /* Job */,
 				77C033712A52BCA7008E95D6 /* Auth */,
 			);
@@ -629,6 +658,7 @@
 		77C0336D2A52B868008E95D6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				771584082A5FB8A500DBD2D4 /* Account */,
 				77C033A12A54E889008E95D6 /* Job */,
 				77C033782A52BD54008E95D6 /* Auth */,
 			);
@@ -885,6 +915,7 @@
 				775BE4AD2A49A36A00DD68CD /* JGStep.swift in Sources */,
 				77C033802A52DE02008E95D6 /* RefreshTokenModel.swift in Sources */,
 				775BE4D62A4C281B00DD68CD /* JGButton.swift in Sources */,
+				771584072A5FB84900DBD2D4 /* ProfileModel.swift in Sources */,
 				77C033C32A565804008E95D6 /* SingleCustomView.swift in Sources */,
 				77C033772A52BD2C008E95D6 /* SignInRequest.swift in Sources */,
 				775BE4BF2A49A85500DD68CD /* UIColor.swift in Sources */,
@@ -912,6 +943,7 @@
 				77C033462A4C313A008E95D6 /* ProfileViewModel.swift in Sources */,
 				775BE4BC2A49A7B500DD68CD /* UIFont.swift in Sources */,
 				771583FE2A5E40FE00DBD2D4 /* FilterViewModel.swift in Sources */,
+				7715840A2A5FB8B100DBD2D4 /* AccountServices.swift in Sources */,
 				77C033B02A55081D008E95D6 /* DetailContent.swift in Sources */,
 				77C033C62A568509008E95D6 /* FourCustomView.swift in Sources */,
 				77C033B22A550956008E95D6 /* DetailViewModel.swift in Sources */,
