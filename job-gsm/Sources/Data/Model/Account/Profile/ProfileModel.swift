@@ -9,5 +9,6 @@ struct ProfileResponse: Codable {
     let phoneNumber: String
     let portfolioUrl: String
     let major: String
+    let jobCount: Int
     let profileUrl: String
 }

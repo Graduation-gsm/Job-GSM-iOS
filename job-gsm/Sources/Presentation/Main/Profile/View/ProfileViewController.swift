@@ -1,18 +1,33 @@
 import UIKit
 import SnapKit
+import RxCocoa
+import RxSwift
 import Then
 
 class ProfileViewController: BaseViewController<ProfileViewModel> {
     private let cellName = ["전화번호","포트폴리오","지원한회사","전공"]
-    private let cellDetail = ["01055136475",">","1","iOS"]
-
+    private lazy var cellDetail = ["",">","",""]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Task {
+            await getData()
+        }
         userTableView.delegate = self
         userTableView.dataSource = self
         userTableView.layer.cornerRadius = 10
         userTableView.layer.masksToBounds = true
+    }
+    
+    private func getData() async {
+        viewModel.fetchProfile { [unowned self] in
+            cellDetail = [
+                "\(viewModel.userData?.phoneNumber ?? "")",
+                ">",
+                "\(String(describing: viewModel.userData?.jobCount))",
+                "\(viewModel.userData?.major ?? "")"
+            ]
+        }
     }
         
     private let userProfile = UIImageView().then {
